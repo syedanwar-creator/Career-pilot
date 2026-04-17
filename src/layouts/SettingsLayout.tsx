@@ -1,27 +1,17 @@
 import { Outlet } from "react-router-dom";
 
-import { settingsNavItems, routePaths } from "@/routes/paths";
-import { AppNavLink, Breadcrumbs } from "@/shared/components";
+import { AppSidebar } from "@/shared/components/AppSidebar";
 
 export function SettingsLayout(): JSX.Element {
   return (
-    <div className="shell shell--section">
-      <header className="section-header-shell">
-        <div>
-          <p className="eyebrow">Settings</p>
-          <h1>Account and workspace preferences</h1>
-        </div>
-        <div className="actions">
-          <AppNavLink label="Back to dashboard" to={routePaths.dashboard} />
-        </div>
-      </header>
-      <Breadcrumbs />
-      <div className="section-nav">
-        {settingsNavItems.map((item) => (
-          <AppNavLink key={item.to} label={item.label} to={item.to} />
-        ))}
+    <div style={{ display: "flex", minHeight: "100vh", fontFamily: "'Inter', system-ui, sans-serif" }}>
+      <AppSidebar section="settings" />
+
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", background: "#f8fafc", minWidth: 0 }}>
+        <main id="route-content" style={{ flex: 1, padding: "28px", overflowY: "auto" }}>
+          <Outlet />
+        </main>
       </div>
-      <Outlet />
     </div>
   );
 }

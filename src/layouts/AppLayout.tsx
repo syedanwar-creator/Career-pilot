@@ -21,12 +21,10 @@ export function AppLayout(): JSX.Element {
       <a className="skip-link" href="#route-content">
         Skip to content
       </a>
-      <div className="app-frame">
-        <NoticeBanner />
-        <main id="route-content" className="route-content" data-route-focus tabIndex={-1}>
-          <Outlet />
-        </main>
-      </div>
+      <NoticeBanner />
+      <main id="route-content" data-route-focus tabIndex={-1} style={{ minHeight: "100vh" }}>
+        <Outlet />
+      </main>
       <ScrollRestoration />
     </>
   );

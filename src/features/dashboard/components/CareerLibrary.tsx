@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import type { Career } from "@/features/dashboard/types";
 import { buildDashboardCareerDetailPath } from "@/routes/paths";
-import { Card, EmptyState, Field } from "@/shared/components";
+import { EmptyState } from "@/shared/components";
 import { labelize } from "@/shared/utils";
 
 interface CareerLibraryProps {
@@ -24,91 +24,106 @@ export const CareerLibrary = memo(function CareerLibrary({
   search
 }: CareerLibraryProps): JSX.Element {
   return (
-    <div className="stack">
-      <Card className="career-library-hero">
-        <div className="career-library-hero__copy">
+    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+
+      {/* Header */}
+      <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "28px 32px" }}>
+        <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "24px", marginBottom: "24px" }}>
           <div>
-            <p className="eyebrow">Career explorer</p>
-            <h1>Choose a career to inspect in depth</h1>
+            <p style={{ color: "#6366f1", fontSize: "11px", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", margin: "0 0 6px" }}>Career Explorer</p>
+            <h1 style={{ fontSize: "28px", fontWeight: 800, color: "#0f172a", margin: "0 0 8px", letterSpacing: "-0.02em" }}>
+              Choose a career to inspect
+            </h1>
+            <p style={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6, margin: 0, maxWidth: "480px" }}>
+              Browse 165+ career paths, then open a full profile to see salary progression, challenges, and your readiness score.
+            </p>
           </div>
-          <p>
-            Start with the library view, then open a dedicated career profile to see the full real-world path,
-            salary progression, challenges, and the proof-based readiness flow.
-          </p>
+          <div style={{ display: "flex", gap: "12px", flexShrink: 0 }}>
+            {[
+              { n: careers.length,     l: "Careers" },
+              { n: categories.length,  l: "Categories" },
+            ].map((s) => (
+              <div key={s.l} style={{ padding: "14px 20px", background: "rgba(99,102,241,0.06)", border: "1px solid rgba(99,102,241,0.15)", borderRadius: "12px", textAlign: "center", minWidth: "80px" }}>
+                <div style={{ fontSize: "22px", fontWeight: 800, color: "#4f46e5" }}>{s.n}</div>
+                <div style={{ fontSize: "11px", color: "#94a3b8", marginTop: "2px" }}>{s.l}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="career-library-hero__stats" aria-label="Career library summary">
-          <div className="career-library-stat">
-            <strong>{careers.length}</strong>
-            <span>Careers shown</span>
-          </div>
-          <div className="career-library-stat">
-            <strong>{categories.length}</strong>
-            <span>Categories</span>
-          </div>
-        </div>
-        <div className="form-row">
-          <Field htmlFor="career-search" label="Search">
+
+        {/* Filters */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: "12px" }}>
+          <div>
+            <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "#94a3b8", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "6px" }}>
+              Search
+            </label>
             <input
-              id="career-search"
-              className="input"
               value={search}
-              onChange={(event) => onSearchChange(event.target.value)}
+              placeholder="🔍  Search careers, e.g. Engineer, Doctor..."
+              onChange={(e) => onSearchChange(e.target.value)}
+              style={{ width: "100%", padding: "10px 14px", border: "1px solid #e2e8f0", borderRadius: "10px", fontSize: "14px", color: "#0f172a", outline: "none", background: "#f8fafc", boxSizing: "border-box", fontFamily: "inherit" }}
             />
-          </Field>
-          <Field htmlFor="career-category" label="Category">
+          </div>
+          <div>
+            <label style={{ display: "block", fontSize: "11px", fontWeight: 600, color: "#94a3b8", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "6px" }}>
+              Category
+            </label>
             <select
-              id="career-category"
-              className="input"
               value={category}
-              onChange={(event) => onCategoryChange(event.target.value)}
+              onChange={(e) => onCategoryChange(e.target.value)}
+              style={{ width: "100%", padding: "10px 14px", border: "1px solid #e2e8f0", borderRadius: "10px", fontSize: "14px", color: "#0f172a", outline: "none", background: "#f8fafc", fontFamily: "inherit" }}
             >
               <option value="">All categories</option>
               {categories.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
+                <option key={item} value={item}>{item}</option>
               ))}
             </select>
-          </Field>
-        </div>
-      </Card>
-
-      <Card className="stack">
-        <div className="card__header">
-          <div>
-            <p className="eyebrow">{careers.length} careers shown</p>
-            <h2>Career cards</h2>
           </div>
+        </div>
+      </div>
+
+      {/* Career Cards */}
+      <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "24px 32px" }}>
+        <div style={{ marginBottom: "20px" }}>
+          <p style={{ color: "#6366f1", fontSize: "11px", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", margin: "0 0 4px" }}>
+            {careers.length} careers shown
+          </p>
+          <h2 style={{ fontSize: "18px", fontWeight: 700, color: "#0f172a", margin: 0 }}>Career Cards</h2>
         </div>
 
         {careers.length ? (
-          <div className="career-library-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", alignItems: "stretch" }}>
             {careers.map((career) => (
               <Link
                 key={career.id}
-                aria-label={`Open ${career.title} career profile`}
-                className="career-library-card"
                 to={buildDashboardCareerDetailPath(career.id)}
+                style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "12px", padding: "20px", borderRadius: "14px", border: "1px solid #e2e8f0", background: "#ffffff", transition: "border-color 0.15s, box-shadow 0.15s, transform 0.15s", color: "inherit", height: "100%", boxSizing: "border-box" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#a5b4fc"; (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 16px rgba(99,102,241,0.1)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#e2e8f0"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; (e.currentTarget as HTMLElement).style.transform = "none"; }}
               >
-                <div className="career-library-card__top">
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "8px" }}>
                   <div>
-                    <p className="eyebrow">{career.category}</p>
-                    <h3>{career.title}</h3>
+                    <p style={{ fontSize: "11px", fontWeight: 600, color: "#6366f1", letterSpacing: "0.06em", textTransform: "uppercase", margin: "0 0 4px" }}>{career.category}</p>
+                    <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a", margin: 0 }}>{career.title}</h3>
                   </div>
-                  <span className="pill">Demand {career.futureOutlook.demandScore}%</span>
+                  <span style={{ display: "inline-flex", alignItems: "center", padding: "3px 9px", borderRadius: "999px", background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.2)", fontSize: "11px", fontWeight: 700, color: "#6366f1", flexShrink: 0 }}>
+                    {career.futureOutlook.demandScore}%
+                  </span>
                 </div>
 
-                <p className="career-library-card__summary">{career.summary}</p>
+                <p style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.55, margin: 0, display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 2, overflow: "hidden", flex: 1 }}>
+                  {career.summary}
+                </p>
 
-                <div className="career-library-card__footer">
-                  <div className="career-library-card__tags" aria-label="Career tags">
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "auto", paddingTop: "8px", borderTop: "1px solid #f1f5f9" }}>
+                  <div style={{ display: "flex", gap: "6px" }}>
                     {(career.interestTags.length ? career.interestTags : career.demandTags).slice(0, 2).map((tag) => (
-                      <span key={tag} className="career-library-card__tag">
+                      <span key={tag} style={{ padding: "2px 8px", borderRadius: "999px", background: "rgba(99,102,241,0.06)", border: "1px solid rgba(99,102,241,0.12)", fontSize: "11px", color: "#6366f1", fontWeight: 500 }}>
                         {labelize(tag)}
                       </span>
                     ))}
                   </div>
-                  <span className="career-library-card__cta">Open career profile</span>
+                  <span style={{ fontSize: "12px", color: "#6366f1", fontWeight: 600 }}>View →</span>
                 </div>
               </Link>
             ))}
@@ -119,7 +134,7 @@ export const CareerLibrary = memo(function CareerLibrary({
             description="Try a different keyword or clear the category to browse more career paths."
           />
         )}
-      </Card>
+      </div>
     </div>
   );
 });
