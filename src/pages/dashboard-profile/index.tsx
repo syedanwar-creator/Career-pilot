@@ -92,12 +92,6 @@ export default function DashboardProfilePage(): JSX.Element {
           <Button disabled={isSubmitting} variant="secondary" onClick={() => void generateQuestions()}>
             {isSubmitting ? "Working..." : "Generate AI question set"}
           </Button>
-          <Button
-            disabled={isSubmitting || !questionSet}
-            onClick={() => void submitProfile(answers)}
-          >
-            {isSubmitting ? "Submitting..." : "Submit profile"}
-          </Button>
         </div>
       </Card>
 
@@ -138,6 +132,14 @@ export default function DashboardProfilePage(): JSX.Element {
               </div>
             </fieldset>
           ))}
+          <div className="actions">
+            <Button
+              disabled={isSubmitting}
+              onClick={() => void submitProfile(answers)}
+            >
+              {isSubmitting ? "Submitting..." : "Submit profile"}
+            </Button>
+          </div>
         </Card>
       ) : (
         <EmptyState
