@@ -59,6 +59,16 @@
       "grade": "10",
       "role": "student_individual",
       "tenantId": null
+    },
+    {
+      "id": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+      "createdAt": "2026-04-17T19:16:14.701Z",
+      "fullName": "syedf",
+      "email": "std1@gmail.com",
+      "passwordHash": "84234f358eae31ac97f8b0af0e01ba23:7d34872a2681cfc078a9a5ee13490da1a5c94eb132245af65d020c026058363385c0c30bc960a386be59d9f216dd142d9243773c229f6e564e7c24b62d7957e9",
+      "grade": "",
+      "role": "student_individual",
+      "tenantId": null
     }
   ],
   "profiles": [
@@ -616,6 +626,219 @@
         ]
       },
       "updatedAt": "2026-04-17T12:07:28.530Z"
+    },
+    {
+      "id": "535886f8-1c94-4cba-beb6-3473e13f75a5",
+      "createdAt": "2026-04-17T19:18:40.123Z",
+      "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+      "basicInfo": {
+        "ageRange": "10-12",
+        "grade": "Grade 10",
+        "favoriteSubjects": "Maths",
+        "favoriteActivities": "sports ,reading ,want to become billionarie",
+        "topicsCuriousAbout": "technology",
+        "personalStrengths": "maths",
+        "avoidsOrDislikes": "im introvert"
+      },
+      "questionSet": {
+        "source": "fallback",
+        "questions": [
+          {
+            "id": "independence-1",
+            "dimension": "independence",
+            "question": "When a decision is yours to make, what usually happens?",
+            "whyItMatters": "This measures comfort with personal ownership.",
+            "options": [
+              "I delay until someone else decides.",
+              "I decide quickly without much thought.",
+              "I decide after thinking through the main options.",
+              "I take ownership, assess the tradeoffs, and decide with confidence."
+            ]
+          },
+          {
+            "id": "resilience-2",
+            "dimension": "resilience",
+            "question": "What happens when your first attempt fails?",
+            "whyItMatters": "This checks recovery after setbacks.",
+            "options": [
+              "I usually give up quickly.",
+              "I feel upset and need a long time before trying again.",
+              "I recover after some thought and try another approach.",
+              "I learn from the setback, adjust fast, and continue."
+            ]
+          },
+          {
+            "id": "empathy-3",
+            "dimension": "empathy",
+            "question": "During a disagreement, what matters most to you?",
+            "whyItMatters": "This shows whether the student can respect other viewpoints.",
+            "options": [
+              "Winning the argument as fast as possible.",
+              "Ending the discussion even if the other person feels unheard.",
+              "Finding a fair solution if possible.",
+              "Understanding both sides and helping the situation settle constructively."
+            ]
+          },
+          {
+            "id": "communication-4",
+            "dimension": "communication",
+            "question": "If you need to explain an idea to others, how do you usually do it?",
+            "whyItMatters": "This reveals clarity and confidence in communication.",
+            "options": [
+              "I avoid explaining because I am uncomfortable.",
+              "I speak, but people often leave confused.",
+              "I can explain clearly when I prepare.",
+              "I usually simplify ideas well and adjust for the audience."
+            ]
+          },
+          {
+            "id": "creativity-5",
+            "dimension": "creativity",
+            "question": "If a school event needs a fresh idea, what do you tend to do?",
+            "whyItMatters": "This shows originality and comfort with ideation.",
+            "options": [
+              "I wait for others to decide the creative direction.",
+              "I copy something familiar because it feels safer.",
+              "I suggest one or two new ideas if I feel confident.",
+              "I enjoy creating multiple original possibilities and shaping them."
+            ]
+          },
+          {
+            "id": "adaptability-6",
+            "dimension": "adaptability",
+            "question": "What happens when plans suddenly change?",
+            "whyItMatters": "This shows flexibility in uncertain environments.",
+            "options": [
+              "I become frustrated and stop performing well.",
+              "I need a lot of time to recover.",
+              "I adjust after a short pause.",
+              "I adapt quickly and find a workable new path."
+            ]
+          },
+          {
+            "id": "analytical-7",
+            "dimension": "analytical",
+            "question": "What feels most natural when you face a complex problem?",
+            "whyItMatters": "This reveals comfort with logic and patterns.",
+            "options": [
+              "I avoid it if I can.",
+              "I try random solutions until one works.",
+              "I compare a few possibilities and choose one.",
+              "I look for patterns, causes, and evidence before deciding."
+            ]
+          },
+          {
+            "id": "resilience-8",
+            "dimension": "resilience",
+            "question": "How do you react when pressure builds close to a deadline?",
+            "whyItMatters": "This measures emotional steadiness under stress.",
+            "options": [
+              "I freeze or avoid the work.",
+              "I panic and lose quality.",
+              "I feel stress but can still finish the work.",
+              "I stay composed, prioritize, and keep moving."
+            ]
+          }
+        ]
+      },
+      "answers": [
+        {
+          "questionId": "independence-1",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "resilience-2",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "empathy-3",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "communication-4",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "creativity-5",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "adaptability-6",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "analytical-7",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "resilience-8",
+          "optionIndex": 0
+        }
+      ],
+      "analysis": {
+        "source": "fallback",
+        "summary": "syedf shows stronger signs of Discipline and Leadership. The current profile suggests promise, but also a need to keep developing Communication and Independence.",
+        "characterReadout": "This is a readiness-oriented interpretation based on how the student answered scenario-style questions and described their current interests.",
+        "dominantTraits": [
+          "Discipline",
+          "Leadership",
+          "Physical Stamina",
+          "Analytical"
+        ],
+        "cautionAreas": [
+          "Communication",
+          "Independence",
+          "Adaptability"
+        ],
+        "workPreferences": [
+          "May perform better with guidance, team rhythm, and visible support."
+        ],
+        "personalityScores": {
+          "analytical": 25,
+          "creativity": 25,
+          "empathy": 25,
+          "resilience": 25,
+          "communication": 25,
+          "discipline": 55,
+          "leadership": 55,
+          "independence": 25,
+          "adaptability": 25,
+          "physicalStamina": 55
+        },
+        "interestSignals": [
+          {
+            "tag": "technology",
+            "score": 48,
+            "reason": "Keywords in the profile point toward technology."
+          },
+          {
+            "tag": "fitness",
+            "score": 48,
+            "reason": "Keywords in the profile point toward fitness."
+          },
+          {
+            "tag": "healthcare",
+            "score": 30,
+            "reason": "No strong direct evidence yet for healthcare."
+          },
+          {
+            "tag": "business",
+            "score": 30,
+            "reason": "No strong direct evidence yet for business."
+          },
+          {
+            "tag": "education",
+            "score": 30,
+            "reason": "No strong direct evidence yet for education."
+          },
+          {
+            "tag": "public-service",
+            "score": 30,
+            "reason": "No strong direct evidence yet for public-service."
+          }
+        ]
+      },
+      "updatedAt": "2026-04-17T19:54:48.725Z"
     }
   ],
   "proofSessions": [
@@ -1389,9 +1612,338 @@
         ]
       },
       "answers": []
+    },
+    {
+      "id": "807fccf8-0016-4b60-8b78-903248160797",
+      "createdAt": "2026-04-17T19:19:08.789Z",
+      "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+      "careerId": "software-engineer",
+      "careerTitle": "Software Engineer",
+      "status": "completed",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 8-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Software Engineer.",
+        "questions": [
+          {
+            "id": "proof-software-engineer-1",
+            "dimension": "independence",
+            "question": "If this career requires long stretches of self-driven work, how ready are you for that?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-2",
+            "dimension": "problem-solving",
+            "question": "How much energy do you get from solving hard problems that may take time?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-3",
+            "dimension": "continuous-learning",
+            "question": "If your current knowledge becomes outdated, how likely are you to rebuild your skill set?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-4",
+            "dimension": "discipline",
+            "question": "When a routine becomes boring but still important, how likely are you to keep doing it well?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-5",
+            "dimension": "ambiguity",
+            "question": "If this career gives you unclear problems instead of clear instructions, how would you respond?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-6",
+            "dimension": "independence",
+            "question": "How comfortable are you taking ownership without constant reassurance from parents or teachers?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-7",
+            "dimension": "problem-solving",
+            "question": "If the first solution fails, how determined are you to keep working toward a better one?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-8",
+            "dimension": "discipline",
+            "question": "If this career expects daily discipline even when no one is watching, how ready are you for that reality?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": [
+        {
+          "questionId": "proof-software-engineer-1",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-software-engineer-2",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-software-engineer-3",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-software-engineer-4",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "proof-software-engineer-5",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-software-engineer-6",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-software-engineer-7",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "proof-software-engineer-8",
+          "optionIndex": 3
+        }
+      ],
+      "evaluation": {
+        "source": "fallback",
+        "overallScore": 50,
+        "points": 500,
+        "readinessBand": "Developing readiness",
+        "dimensionScores": {
+          "independence": 58,
+          "problem-solving": 73,
+          "continuous-learning": 15,
+          "discipline": 88,
+          "ambiguity": 15
+        },
+        "strengths": [
+          "Discipline",
+          "Problem Solving",
+          "Independence"
+        ],
+        "risks": [
+          "Independence",
+          "Continuous Learning",
+          "Ambiguity"
+        ],
+        "narrative": "The student shows developing readiness for Software Engineer. Stronger evidence appears in Discipline and Problem Solving, while Independence needs more deliberate support.",
+        "parentSummary": "Software Engineer readiness is currently 50%. This score suggests developing readiness. Parents should focus on helping the student strengthen Independence without discouraging progress in Discipline.",
+        "schoolSummary": "The student earned 500 proof points for Software Engineer. School mentors can support improvement in Independence and Continuous Learning through guided experiences and reflective coaching.",
+        "nextSteps": [
+          "Give the student a small real-world challenge that develops Independence.",
+          "Continue exposure projects that use Discipline.",
+          "Review the proof score again after one month of focused practice."
+        ]
+      },
+      "completedAt": "2026-04-17T19:19:26.878Z"
+    },
+    {
+      "id": "9dc62654-7515-4a50-a840-3e77b17cfab4",
+      "createdAt": "2026-04-17T19:19:26.887Z",
+      "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+      "careerId": "software-engineer",
+      "careerTitle": "Software Engineer",
+      "status": "draft",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 8-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Software Engineer.",
+        "questions": [
+          {
+            "id": "proof-software-engineer-1",
+            "dimension": "problem-solving",
+            "question": "If the first solution fails, how determined are you to keep working toward a better one?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-2",
+            "dimension": "discipline",
+            "question": "When a routine becomes boring but still important, how likely are you to keep doing it well?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-3",
+            "dimension": "continuous-learning",
+            "question": "If this career forces you to keep learning every year, how ready are you for that?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-4",
+            "dimension": "independence",
+            "question": "If this career requires long stretches of self-driven work, how ready are you for that?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-5",
+            "dimension": "ambiguity",
+            "question": "When a career requires calm thinking in uncertainty, what is your natural response?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-6",
+            "dimension": "ambiguity",
+            "question": "If this career gives you unclear problems instead of clear instructions, how would you respond?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-7",
+            "dimension": "discipline",
+            "question": "If progress in this career is slow for months, how strong is your commitment to stay consistent?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-8",
+            "dimension": "problem-solving",
+            "question": "How much energy do you get from solving hard problems that may take time?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": []
     }
   ],
   "activityLog": [
+    {
+      "id": "be286430-d44c-4f9c-96be-28c601881252",
+      "createdAt": "2026-04-17T19:54:48.727Z",
+      "type": "profile_submitted",
+      "details": {
+        "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+        "tenantId": null
+      },
+      "timestamp": "2026-04-17T19:54:48.725Z"
+    },
+    {
+      "id": "cf654f80-8eac-4371-b8b3-4daca1d28978",
+      "createdAt": "2026-04-17T19:19:26.878Z",
+      "type": "proof_completed",
+      "details": {
+        "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+        "careerId": "software-engineer",
+        "points": 500
+      },
+      "timestamp": "2026-04-17T19:19:26.878Z"
+    },
+    {
+      "id": "b1fa586b-f025-4679-b670-0aebb3d6add1",
+      "createdAt": "2026-04-17T19:18:40.123Z",
+      "type": "profile_submitted",
+      "details": {
+        "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+        "tenantId": null
+      },
+      "timestamp": "2026-04-17T19:18:40.123Z"
+    },
+    {
+      "id": "393c1c25-7cc1-4587-b201-423def6d391b",
+      "createdAt": "2026-04-17T19:16:14.701Z",
+      "type": "user_registered",
+      "details": {
+        "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+        "role": "student_individual",
+        "tenantId": null
+      },
+      "timestamp": "2026-04-17T19:16:14.701Z"
+    },
     {
       "id": "ee005109-59df-44ee-a133-ea44eedd03fc",
       "createdAt": "2026-04-17T17:55:47.703Z",

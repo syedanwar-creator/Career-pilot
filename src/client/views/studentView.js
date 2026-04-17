@@ -307,7 +307,7 @@ function renderProofCenter(state) {
             <h2>Career proof center</h2>
           </div>
           <p>
-            Each proof session asks around 15 mental-readiness questions for a specific career. The result becomes a score,
+            Each proof session asks 8 mental-readiness questions for a specific career. The result becomes a score,
             a parent-facing summary, and a school-facing support note.
           </p>
         </div>
@@ -369,7 +369,7 @@ function renderProofCenter(state) {
           : `
             <article class="panel empty-state">
               <h2>No active proof session</h2>
-              <p>Open a career in the explorer and use “Prove I Am Ready For This Career” to begin the 15-question readiness proof.</p>
+              <p>Open a career in the explorer and use “Prove I Am Ready For This Career” to begin the 8-question readiness proof.</p>
               <button class="button button--secondary" data-action="set-student-tab" data-tab="careers">Go to career explorer</button>
             </article>
           `

@@ -84,7 +84,7 @@ export function useProfileStudioPage(): {
     try {
       const response = await dashboardApi.generateProfileQuestionSet(formValues);
       setQuestionSet(response);
-      showNotice("AI question set generated. Answer every question before submitting.", "success");
+      showNotice(`Short AI question set generated. Answer all ${response.questions.length} questions before submitting.`, "success");
     } catch (error) {
       showNotice((error as Error).message, "danger");
     } finally {
