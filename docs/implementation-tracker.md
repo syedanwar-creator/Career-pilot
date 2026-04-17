@@ -35,7 +35,7 @@ This file tracks the user's required scope so implementation stays aligned.
 
 ## Requirement 5: AI-based career proofing
 - [x] Career-specific proof flow
-- [x] Around 15 questions per career
+- [x] 8 questions per career proof session
 - [x] Questions generated for mental and behavioral readiness
 - [x] Gemini-backed question generation
 - [x] Gemini-backed narrative evaluation

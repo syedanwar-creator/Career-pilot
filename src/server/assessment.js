@@ -13,6 +13,9 @@ const personalityDimensions = [
   "physicalStamina"
 ];
 
+const PROFILE_QUESTION_COUNT = 8;
+const PROOF_QUESTION_COUNT = 8;
+
 const interestTags = [
   "technology",
   "healthcare",
@@ -469,7 +472,7 @@ function buildFallbackProfileQuestionSet() {
   return {
     source: "fallback",
     questions: shuffle(profileQuestionBank)
-      .slice(0, 12)
+      .slice(0, PROFILE_QUESTION_COUNT)
       .map((question, index) => ({
         ...question,
         id: `${question.dimension}-${index + 1}`
@@ -513,7 +516,7 @@ async function generateProfileQuestionSet(context) {
   };
 
   const prompt = [
-    "Generate 12 fresh personality and character questions for a student career-profiling interview.",
+    `Generate ${PROFILE_QUESTION_COUNT} fresh personality and character questions for a student career-profiling interview.`,
     "The questions must feel varied and not repetitive.",
     "Every question must have exactly 4 answer options ordered from least aligned to most aligned for the target dimension.",
     `Student context: ${JSON.stringify(context)}`
@@ -529,7 +532,7 @@ async function generateProfileQuestionSet(context) {
 
     return {
       source: response.source || "gemini",
-      questions: (response.questions || []).slice(0, 12)
+      questions: (response.questions || []).slice(0, PROFILE_QUESTION_COUNT)
     };
   } catch (error) {
     return buildFallbackProfileQuestionSet();
@@ -694,13 +697,13 @@ function buildFallbackProofQuestionSet(career) {
   });
 
   const questions = shuffle(templates)
-    .slice(0, 15)
+    .slice(0, PROOF_QUESTION_COUNT)
     .map((item, index) => ({
       id: `proof-${career.id}-${index + 1}`,
       ...item
     }));
 
-  while (questions.length < 15) {
+  while (questions.length < PROOF_QUESTION_COUNT) {
     questions.push({
       id: `proof-${career.id}-${questions.length + 1}`,
       dimension: "motivation",
@@ -712,7 +715,7 @@ function buildFallbackProofQuestionSet(career) {
 
   return {
     source: "fallback",
-    introduction: `This 15-question proof session checks whether the student is mentally and behaviorally ready for the real demands of ${career.title}.`,
+    introduction: `This ${PROOF_QUESTION_COUNT}-question proof session checks whether the student is mentally and behaviorally ready for the real demands of ${career.title}.`,
     questions
   };
 }
@@ -751,7 +754,7 @@ async function generateProofQuestionSet({ career, profile }) {
   };
 
   const prompt = [
-    "Generate 15 mental-readiness proof questions for a student considering a specific career.",
+    `Generate ${PROOF_QUESTION_COUNT} mental-readiness proof questions for a student considering a specific career.`,
     "Focus on real-world demands, not technical skills.",
     "Examples include family separation, discipline, emotional stability, ethics, pressure, service mindset, irregular hours, or physical stamina when relevant.",
     "Each question must have exactly 4 options ordered from least ready to most ready.",
@@ -770,7 +773,7 @@ async function generateProofQuestionSet({ career, profile }) {
     return {
       source: response.source || "gemini",
       introduction: response.introduction,
-      questions: (response.questions || []).slice(0, 15)
+      questions: (response.questions || []).slice(0, PROOF_QUESTION_COUNT)
     };
   } catch (error) {
     return buildFallbackProofQuestionSet(career);

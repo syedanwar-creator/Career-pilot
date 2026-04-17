@@ -11,6 +11,7 @@ export const routePaths = {
   dashboardCareers: "/dashboard/careers",
   dashboardCareerDetail: "/dashboard/careers/:careerId",
   dashboardProof: "/dashboard/proof",
+  dashboardCareerHelp: "/dashboard/career-help",
   settingsProfile: "/settings/profile",
   settingsSecurity: "/settings/security",
   adminOverview: "/admin/overview",

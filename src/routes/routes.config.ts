@@ -30,6 +30,7 @@ const dashboardProfilePageImport: PageImporter = () => import("@/pages/dashboard
 const dashboardCareersPageImport: PageImporter = () => import("@/pages/dashboard-careers");
 const dashboardCareerDetailPageImport: PageImporter = () => import("@/pages/dashboard-career-detail");
 const dashboardProofPageImport: PageImporter = () => import("@/pages/dashboard-proof");
+const dashboardCareerHelpPageImport: PageImporter = () => import("@/pages/dashboard-career-help");
 const settingsProfilePageImport: PageImporter = () => import("@/pages/settings-profile");
 const settingsSecurityPageImport: PageImporter = () => import("@/pages/settings-security");
 const adminOverviewPageImport: PageImporter = () => import("@/pages/admin-overview");
@@ -46,6 +47,7 @@ const pagePrefetchers = new Map<string, PageImporter>([
   [routePaths.dashboardProfile, dashboardProfilePageImport],
   [routePaths.dashboardCareers, dashboardCareersPageImport],
   [routePaths.dashboardProof, dashboardProofPageImport],
+  [routePaths.dashboardCareerHelp, dashboardCareerHelpPageImport],
   [routePaths.settingsProfile, settingsProfilePageImport],
   [routePaths.settingsSecurity, settingsSecurityPageImport],
   [routePaths.adminOverview, adminOverviewPageImport],
@@ -215,6 +217,18 @@ const routeDefinitions: RouteDefinition[] = [
               label: "Proof Center",
               icon: "shield-check",
               parent: "dashboard",
+              section: "dashboard",
+              requiresAuth: true
+            }
+          },
+          {
+            path: "career-help",
+            element: lazyElement(dashboardCareerHelpPageImport, createElement(ContentPageSkeleton), "Career help"),
+            meta: {
+              id: "dashboard-career-help",
+              label: "Career Help",
+              icon: "sparkles",
+              parent: "dashboard-proof",
               section: "dashboard",
               requiresAuth: true
             }

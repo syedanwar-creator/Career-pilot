@@ -315,7 +315,7 @@ async function handleStartProof(careerId) {
     activeStudentTab: "proof"
   });
 
-  showNotice("Career proof session started. Complete all 15 questions to earn points.", "tone-success");
+  showNotice("Career proof session started. Complete all 8 questions to earn points.", "tone-success");
 }
 
 async function handleProofSubmit() {

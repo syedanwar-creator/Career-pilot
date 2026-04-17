@@ -1,11 +1,45 @@
 import { memo } from "react";
+import { Link, createSearchParams } from "react-router-dom";
 
 import type { ProofSession } from "@/features/dashboard/types";
+import { routePaths } from "@/routes/paths";
 import { Card } from "@/shared/components";
 import { formatDate, getProofReadinessState } from "@/shared/utils";
 
 interface ProofHistoryListProps {
   sessions: ProofSession[];
+}
+
+const technologyKeywords = [
+  "technology",
+  "software",
+  "engineer",
+  "developer",
+  "data",
+  "computer",
+  "digital",
+  "ai",
+  "tech"
+];
+
+function isTechnologyProofSession(session: ProofSession): boolean {
+  const haystack = [
+    session.careerTitle,
+    session.evaluation?.narrative,
+    session.evaluation?.parentSummary,
+    session.evaluation?.schoolSummary
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return technologyKeywords.some((keyword) => haystack.includes(keyword));
+}
+
+function getCareerHelpCta(score: number): string {
+  return score < 65
+    ? "Dont worry .I will help you with your career"
+    : "I will help you to get placed in company like Amazon ,netflix ,google";
 }
 
 export const ProofHistoryList = memo(function ProofHistoryList({ sessions }: ProofHistoryListProps): JSX.Element {
@@ -21,7 +55,9 @@ export const ProofHistoryList = memo(function ProofHistoryList({ sessions }: Pro
   return (
     <div className="stack">
       {sessions.map((session) => {
-        const readiness = getProofReadinessState(session.evaluation?.overallScore || 0);
+        const score = session.evaluation?.overallScore || 0;
+        const readiness = getProofReadinessState(score);
+        const isTechnology = isTechnologyProofSession(session);
 
         return (
           <Card key={session.id}>
@@ -32,7 +68,7 @@ export const ProofHistoryList = memo(function ProofHistoryList({ sessions }: Pro
               </div>
               <div className="actions">
                 <span className={`pill pill--${readiness.tone}`}>
-                  {readiness.label} {session.evaluation?.overallScore || 0}%
+                  {readiness.label} {score}%
                 </span>
                 <span className="pill">{formatDate(session.completedAt)}</span>
               </div>
@@ -47,6 +83,21 @@ export const ProofHistoryList = memo(function ProofHistoryList({ sessions }: Pro
               <li>Parent summary: {session.evaluation?.parentSummary}</li>
               <li>School summary: {session.evaluation?.schoolSummary}</li>
             </ul>
+            <div className="actions">
+              <Link
+                className={`button proof-help-button ${score < 65 ? "proof-help-button--support" : "proof-help-button--placement"}`}
+                to={{
+                  pathname: routePaths.dashboardCareerHelp,
+                  search: createSearchParams({
+                    score: String(score),
+                    career: session.careerTitle,
+                    technology: isTechnology ? "1" : "0"
+                  }).toString()
+                }}
+              >
+                {getCareerHelpCta(score)}
+              </Link>
+            </div>
           </Card>
         );
       })}

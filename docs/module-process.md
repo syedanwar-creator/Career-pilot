@@ -27,7 +27,7 @@
 - `src/server/assessment.js`
   - Generates random AI profile interview questions
   - Analyzes student character and personality
-  - Generates 15 career-proof questions for each career
+  - Generates 8 career-proof questions for each career
   - Evaluates proof sessions into points, parent summary, and school summary
   - Includes fallback logic when `GEMINI_API_KEY` is not configured
 
@@ -88,6 +88,6 @@
 4. The profile is analyzed into character summary, personality scores, and interest signals.
 5. The dashboard recommends careers based on that analysis.
 6. The student explores one of 165 careers in full detail.
-7. The student launches a 15-question readiness proof session for a chosen career.
+7. The student launches an 8-question readiness proof session for a chosen career.
 8. The server scores the answers into points and produces parent + school summaries.
 9. School admins can view students, recommendations, and proof evidence inside the tenant workspace.
