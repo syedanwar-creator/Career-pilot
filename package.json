@@ -5,6 +5,7 @@
   "description": "Multi-tenant career readiness platform with AI-assisted profiling and career proof scoring",
   "scripts": {
     "start": "node server.js",
+    "dev": "node server.js & vite",
     "dev:server": "node server.js",
     "dev:client": "vite",
     "build": "tsc -b && vite build",
