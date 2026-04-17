@@ -606,6 +606,7 @@ dt,
   inline-size: 100%;
   text-align: left;
   color: var(--color-text-primary);
+  text-decoration: none;
   transition:
     transform var(--duration-micro) var(--easing-standard),
     border-color var(--duration-micro) var(--easing-standard),
@@ -792,6 +793,126 @@ dt,
   background: var(--color-surface-card);
 }
 
+.career-library-hero {
+  align-items: end;
+}
+
+.career-library-hero__copy {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.career-library-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.career-library-stat {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface-card);
+}
+
+.career-library-stat strong {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-heading);
+}
+
+.career-library-stat span {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+}
+
+.career-library-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.career-library-card {
+  display: grid;
+  gap: var(--space-4);
+  min-block-size: 17rem;
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border-subtle);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 243, 235, 0.96));
+  color: var(--color-text-primary);
+  text-decoration: none;
+  box-shadow: var(--shadow-panel);
+  transition:
+    transform var(--duration-micro) var(--easing-standard),
+    border-color var(--duration-micro) var(--easing-standard),
+    background-color var(--duration-panel) var(--easing-standard),
+    box-shadow var(--duration-panel) var(--easing-standard);
+}
+
+.career-library-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-feedback-info);
+  box-shadow: 0 20px 40px rgba(30, 36, 48, 0.12);
+}
+
+.career-library-card:active {
+  transform: translateY(0);
+}
+
+.career-library-card__top,
+.career-library-card__footer,
+.career-library-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.career-library-card__top,
+.career-library-card__footer {
+  justify-content: space-between;
+}
+
+.career-library-card__summary {
+  margin: 0;
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.career-library-card__tag {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-chip);
+  background: var(--color-feedback-info-surface);
+  color: var(--color-feedback-info);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  font-weight: var(--font-weight-medium);
+}
+
+.career-library-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-action-primary);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  font-weight: var(--font-weight-semibold);
+}
+
+.career-library-card__cta::after {
+  content: "→";
+}
+
 .breadcrumbs ol {
   padding: 0;
   list-style: none;
@@ -933,6 +1054,14 @@ dt,
   .skeleton-page--auth {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .career-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .career-library-hero {
+    grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.6fr);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -962,6 +1091,10 @@ dt,
   .notice {
     flex-wrap: nowrap;
   }
+
+  .career-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1280px) {
@@ -971,6 +1104,10 @@ dt,
 
   .split-layout {
     grid-template-columns: minmax(0, 0.92fr) minmax(24rem, 1.08fr);
+  }
+
+  .career-library-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import { RecommendationGrid, ProofHistoryList, ProfileInsightCards, useDashboardHomePage } from "@/features/dashboard";
-import { routePaths } from "@/routes/paths";
+import { buildDashboardCareerDetailPath, routePaths } from "@/routes/paths";
 import { Button, Card, EmptyState } from "@/shared/components";
 import { ContentPageSkeleton } from "@/shared/components/Skeletons";
 
@@ -67,7 +67,7 @@ export default function DashboardHomePage(): JSX.Element {
           </div>
           <RecommendationGrid
             items={dashboard.recommendations.slice(0, 6)}
-            onOpenCareer={(careerId) => navigate(`${routePaths.dashboardCareers}?careerId=${careerId}`)}
+            onOpenCareer={(careerId) => navigate(buildDashboardCareerDetailPath(careerId))}
           />
         </Card>
       ) : null}
