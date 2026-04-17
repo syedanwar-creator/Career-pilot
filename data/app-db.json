@@ -49,6 +49,16 @@
       "grade": "Grade 12",
       "role": "student_individual",
       "tenantId": null
+    },
+    {
+      "id": "8c55802a-73ce-4e79-966d-d1471b96dac6",
+      "createdAt": "2026-04-17T10:33:24.265Z",
+      "fullName": "irshadh",
+      "email": "irshadhmohammed12@gmail.com",
+      "passwordHash": "4aaf9bc70ec2199989fc6476520c68a1:c7418111e8309d5438d08d9a9c84840f95da2bc09ef3f5f7334409f065c4caed282b1127c46be8dbed1861e1537b12b6b791caac36a67d8b44aabf6ea52aed24",
+      "grade": "10",
+      "role": "student_individual",
+      "tenantId": null
     }
   ],
   "profiles": [
@@ -151,76 +161,269 @@
         "avoidsOrDislikes": "Heavy repetition without purpose, unclear communication, slow bureaucracy"
       },
       "questionSet": {
-        "source": "seed",
-        "questions": []
+        "source": "fallback",
+        "questions": [
+          {
+            "id": "resilience-1",
+            "dimension": "resilience",
+            "question": "How do you react when pressure builds close to a deadline?",
+            "whyItMatters": "This measures emotional steadiness under stress.",
+            "options": [
+              "I freeze or avoid the work.",
+              "I panic and lose quality.",
+              "I feel stress but can still finish the work.",
+              "I stay composed, prioritize, and keep moving."
+            ]
+          },
+          {
+            "id": "communication-2",
+            "dimension": "communication",
+            "question": "What do you usually do when someone gives you feedback?",
+            "whyItMatters": "This checks listening and response quality.",
+            "options": [
+              "I take it personally and shut down.",
+              "I listen, but I rarely change anything.",
+              "I consider it if it seems useful.",
+              "I listen carefully, ask clarifying questions, and improve."
+            ]
+          },
+          {
+            "id": "leadership-3",
+            "dimension": "leadership",
+            "question": "In group work, when do you usually step forward?",
+            "whyItMatters": "This measures initiative and coordination tendency.",
+            "options": [
+              "I prefer that someone else always leads.",
+              "I lead only when no one else wants to.",
+              "I can guide the group if needed.",
+              "I naturally organize people, clarify direction, and keep momentum."
+            ]
+          },
+          {
+            "id": "resilience-4",
+            "dimension": "resilience",
+            "question": "What happens when your first attempt fails?",
+            "whyItMatters": "This checks recovery after setbacks.",
+            "options": [
+              "I usually give up quickly.",
+              "I feel upset and need a long time before trying again.",
+              "I recover after some thought and try another approach.",
+              "I learn from the setback, adjust fast, and continue."
+            ]
+          },
+          {
+            "id": "analytical-5",
+            "dimension": "analytical",
+            "question": "When instructions are unclear, what do you usually do first?",
+            "whyItMatters": "This checks whether the student seeks structure before acting.",
+            "options": [
+              "I get stuck unless someone explains every step.",
+              "I try one thing quickly and hope it works.",
+              "I break the task into parts and test what seems most likely.",
+              "I clarify the goal, map the problem, and move in a structured way."
+            ]
+          },
+          {
+            "id": "physicalStamina-6",
+            "dimension": "physicalStamina",
+            "question": "If a role requires stamina plus mental focus at the same time, how do you react?",
+            "whyItMatters": "This checks combined physical and mental endurance.",
+            "options": [
+              "That kind of pressure drains me very quickly.",
+              "I can do it briefly, but not consistently.",
+              "I can handle it with preparation.",
+              "I am mentally ready for demanding routines if the mission matters."
+            ]
+          },
+          {
+            "id": "leadership-7",
+            "dimension": "leadership",
+            "question": "How do you react when a team result depends partly on you?",
+            "whyItMatters": "This checks ownership under shared responsibility.",
+            "options": [
+              "I avoid responsibility because I do not want the pressure.",
+              "I do only my own part and hope the rest works out.",
+              "I take responsibility for my part and support others if needed.",
+              "I actively coordinate, communicate, and protect the final outcome."
+            ]
+          },
+          {
+            "id": "communication-8",
+            "dimension": "communication",
+            "question": "If you need to explain an idea to others, how do you usually do it?",
+            "whyItMatters": "This reveals clarity and confidence in communication.",
+            "options": [
+              "I avoid explaining because I am uncomfortable.",
+              "I speak, but people often leave confused.",
+              "I can explain clearly when I prepare.",
+              "I usually simplify ideas well and adjust for the audience."
+            ]
+          },
+          {
+            "id": "analytical-9",
+            "dimension": "analytical",
+            "question": "What feels most natural when you face a complex problem?",
+            "whyItMatters": "This reveals comfort with logic and patterns.",
+            "options": [
+              "I avoid it if I can.",
+              "I try random solutions until one works.",
+              "I compare a few possibilities and choose one.",
+              "I look for patterns, causes, and evidence before deciding."
+            ]
+          },
+          {
+            "id": "physicalStamina-10",
+            "dimension": "physicalStamina",
+            "question": "How do you feel about work that may require long hours on your feet or active movement?",
+            "whyItMatters": "This measures comfort with physically demanding roles.",
+            "options": [
+              "I strongly prefer to avoid it.",
+              "I can handle it rarely, but not often.",
+              "I can manage it if the work matters.",
+              "I am comfortable with active, physically demanding routines."
+            ]
+          },
+          {
+            "id": "discipline-11",
+            "dimension": "discipline",
+            "question": "How careful are you with small but important details?",
+            "whyItMatters": "This checks execution reliability.",
+            "options": [
+              "I miss details often and do not revisit them.",
+              "I notice some details, but I rush a lot.",
+              "I usually review my work once before finishing.",
+              "I check carefully and take responsibility for getting it right."
+            ]
+          },
+          {
+            "id": "empathy-12",
+            "dimension": "empathy",
+            "question": "During a disagreement, what matters most to you?",
+            "whyItMatters": "This shows whether the student can respect other viewpoints.",
+            "options": [
+              "Winning the argument as fast as possible.",
+              "Ending the discussion even if the other person feels unheard.",
+              "Finding a fair solution if possible.",
+              "Understanding both sides and helping the situation settle constructively."
+            ]
+          }
+        ]
       },
-      "answers": [],
+      "answers": [
+        {
+          "questionId": "resilience-1",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "communication-2",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "leadership-3",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "resilience-4",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "analytical-5",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "physicalStamina-6",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "leadership-7",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "communication-8",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "analytical-9",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "physicalStamina-10",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "discipline-11",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "empathy-12",
+          "optionIndex": 2
+        }
+      ],
       "analysis": {
-        "source": "seed",
-        "summary": "Nila shows strong signs of Analytical thinking and Independence. The profile points toward technology careers that reward focused problem solving and continuous learning.",
-        "characterReadout": "This demo student profile represents an independent learner who enjoys figuring things out, building skills through practice, and staying curious about fast-changing fields.",
+        "source": "fallback",
+        "summary": "Nila Joseph shows stronger signs of Physical Stamina and Empathy. The current profile suggests promise, but also a need to keep developing Adaptability and Analytical.",
+        "characterReadout": "This is a readiness-oriented interpretation based on how the student answered scenario-style questions and described their current interests.",
         "dominantTraits": [
-          "Analytical",
-          "Independence",
-          "Discipline",
-          "Adaptability"
-        ],
-        "cautionAreas": [
           "Physical Stamina",
           "Empathy",
-          "Leadership"
+          "Discipline",
+          "Resilience"
+        ],
+        "cautionAreas": [
+          "Adaptability",
+          "Analytical",
+          "Communication"
         ],
         "workPreferences": [
-          "Does well in self-driven project work and focused problem-solving blocks.",
-          "Learns quickly when the goal is clear and the challenge feels meaningful.",
-          "Fits best in environments that reward experimentation, curiosity, and disciplined execution."
+          "May perform better with guidance, team rhythm, and visible support.",
+          "Open to physically active or field-heavy roles."
         ],
         "personalityScores": {
-          "analytical": 91,
-          "creativity": 77,
-          "empathy": 52,
-          "resilience": 76,
-          "communication": 68,
-          "discipline": 84,
-          "leadership": 58,
-          "independence": 87,
-          "adaptability": 82,
-          "physicalStamina": 38
+          "analytical": 50,
+          "creativity": 55,
+          "empathy": 75,
+          "resilience": 73,
+          "communication": 50,
+          "discipline": 75,
+          "leadership": 60,
+          "independence": 55,
+          "adaptability": 55,
+          "physicalStamina": 95
         },
         "interestSignals": [
           {
             "tag": "technology",
-            "score": 96,
-            "reason": "Strong and repeated signals around software, systems, and digital building."
+            "score": 84,
+            "reason": "Keywords in the profile point toward technology."
           },
           {
             "tag": "science",
-            "score": 82,
-            "reason": "The profile highlights comfort with logic, experimentation, and technical learning."
+            "score": 84,
+            "reason": "Keywords in the profile point toward science."
           },
           {
             "tag": "creative",
-            "score": 70,
-            "reason": "Design exploration and product thinking show consistent creative interest."
+            "score": 66,
+            "reason": "Keywords in the profile point toward creative."
           },
           {
             "tag": "business",
-            "score": 56,
-            "reason": "Startup curiosity adds a moderate commercial interest signal."
-          },
-          {
-            "tag": "hands-on",
-            "score": 52,
-            "reason": "Maker-style projects indicate practical building energy."
+            "score": 48,
+            "reason": "Keywords in the profile point toward business."
           },
           {
             "tag": "education",
-            "score": 38,
-            "reason": "There is some willingness to explain ideas, but it is not the core driver."
+            "score": 48,
+            "reason": "Keywords in the profile point toward education."
+          },
+          {
+            "tag": "healthcare",
+            "score": 30,
+            "reason": "No strong direct evidence yet for healthcare."
           }
         ]
       },
-      "updatedAt": "2026-04-01T08:59:56.837Z"
+      "updatedAt": "2026-04-17T12:07:28.530Z"
     }
   ],
   "proofSessions": [
@@ -608,6 +811,27 @@
   ],
   "activityLog": [
     {
+      "id": "95295dcb-4b62-450a-b805-cab4ea87cd37",
+      "createdAt": "2026-04-17T12:07:28.531Z",
+      "type": "profile_submitted",
+      "details": {
+        "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+        "tenantId": null
+      },
+      "timestamp": "2026-04-17T12:07:28.530Z"
+    },
+    {
+      "id": "bce28439-28f1-4c6b-82f8-9027f34e184c",
+      "createdAt": "2026-04-17T10:33:24.265Z",
+      "type": "user_registered",
+      "details": {
+        "userId": "8c55802a-73ce-4e79-966d-d1471b96dac6",
+        "role": "student_individual",
+        "tenantId": null
+      },
+      "timestamp": "2026-04-17T10:33:24.265Z"
+    },
+    {
       "id": "1d5b98ef-c967-4d0a-8661-3fe30a57596d",
       "createdAt": "2026-04-17T10:04:45.960Z",
       "type": "proof_completed",
@@ -630,5 +854,6 @@
       },
       "timestamp": "2026-04-17T08:59:56.842Z"
     }
-  ]
+  ],
+  "passwordResetTokens": []
 }

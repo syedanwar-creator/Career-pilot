@@ -7,9 +7,12 @@ const contentTypes = {
   ".ico": "image/x-icon",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".map": "application/json; charset=utf-8",
+  ".mjs": "text/javascript; charset=utf-8",
   ".png": "image/png",
   ".svg": "image/svg+xml",
-  ".txt": "text/plain; charset=utf-8"
+  ".txt": "text/plain; charset=utf-8",
+  ".woff2": "font/woff2"
 };
 
 function getRequestInfo(request) {
@@ -83,11 +86,13 @@ function parseCookies(request) {
 }
 
 function serveStaticAsset(projectRoot, pathname, response) {
+  const distRoot = path.join(projectRoot, "dist");
+  const staticRoot = fs.existsSync(path.join(distRoot, "index.html")) ? distRoot : projectRoot;
   const requestPath = pathname === "/" ? "/index.html" : pathname;
   const normalizedPath = path.normalize(requestPath).replace(/^(\.\.[/\\])+/, "");
-  const assetPath = path.join(projectRoot, normalizedPath);
+  const assetPath = path.join(staticRoot, normalizedPath);
 
-  if (!assetPath.startsWith(projectRoot)) {
+  if (!assetPath.startsWith(staticRoot)) {
     sendText(response, 403, "Forbidden");
     return;
   }
@@ -95,6 +100,22 @@ function serveStaticAsset(projectRoot, pathname, response) {
   fs.readFile(assetPath, (error, content) => {
     if (error) {
       if (error.code === "ENOENT") {
+        const requestExtension = path.extname(assetPath);
+
+        if (!requestExtension) {
+          const indexPath = path.join(staticRoot, "index.html");
+          fs.readFile(indexPath, (indexError, indexContent) => {
+            if (indexError) {
+              sendText(response, 404, "Not found");
+              return;
+            }
+
+            response.writeHead(200, { "Content-Type": contentTypes[".html"] });
+            response.end(indexContent);
+          });
+          return;
+        }
+
         sendText(response, 404, "Not found");
         return;
       }
