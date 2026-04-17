@@ -10,7 +10,8 @@ function createDefaultDb() {
     users: [],
     profiles: [],
     proofSessions: [],
-    activityLog: []
+    activityLog: [],
+    passwordResetTokens: []
   };
 }
 
@@ -25,7 +26,33 @@ function ensureDatabase() {
 function readDb() {
   ensureDatabase();
   const raw = fs.readFileSync(dbFilePath, "utf8");
-  return JSON.parse(raw);
+  const db = JSON.parse(raw);
+
+  if (!Array.isArray(db.passwordResetTokens)) {
+    db.passwordResetTokens = [];
+  }
+
+  if (!Array.isArray(db.activityLog)) {
+    db.activityLog = [];
+  }
+
+  if (!Array.isArray(db.tenants)) {
+    db.tenants = [];
+  }
+
+  if (!Array.isArray(db.users)) {
+    db.users = [];
+  }
+
+  if (!Array.isArray(db.profiles)) {
+    db.profiles = [];
+  }
+
+  if (!Array.isArray(db.proofSessions)) {
+    db.proofSessions = [];
+  }
+
+  return db;
 }
 
 function writeDb(db) {
