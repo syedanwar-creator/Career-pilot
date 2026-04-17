@@ -1,0 +1,9 @@
+{
+  "name": "career-reality-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant career readiness platform with AI-assisted profiling and career proof scoring",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

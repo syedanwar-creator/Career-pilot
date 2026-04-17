@@ -1,0 +1,634 @@
+{
+  "tenants": [
+    {
+      "id": "3a9ce7d0-bb31-4e6e-aa1c-4f2aaa04d056",
+      "createdAt": "2026-03-20T08:59:56.668Z",
+      "name": "Sunrise Public School",
+      "slug": "sunrise-public-school",
+      "joinCode": "SUNR-2026",
+      "type": "school"
+    }
+  ],
+  "users": [
+    {
+      "id": "3eb685c1-eda0-4726-97b0-b6fc0f73f98c",
+      "createdAt": "2026-03-21T08:59:56.668Z",
+      "fullName": "Anita Das",
+      "email": "admin@sunrise.demo",
+      "passwordHash": "15aaf7b9b560765d7f435124944f9ac2:4396a207d5054f1ff7c9c6ff48b2e848f9607da2aa4c157b8f29ea25ff9a1f5b5a0d865dc281ce857d57d85cd2ef305e5c15d57a5bd5c7a6328d7799e1b3df0d",
+      "grade": "",
+      "role": "school_admin",
+      "tenantId": "3a9ce7d0-bb31-4e6e-aa1c-4f2aaa04d056"
+    },
+    {
+      "id": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+      "createdAt": "2026-03-23T08:59:56.668Z",
+      "fullName": "Aarav Menon",
+      "email": "student@sunrise.demo",
+      "passwordHash": "ba5756cbbb9df67cfb1200e782c10c34:b40253f0ea6d28d24af8050cee4c09b88d723f3d46f50d51d543ef7c0d5de46d7256f7aa9d4fcf0f8c871cae29592b3af09c4e939097ddbaa64492a0c380694b",
+      "grade": "Grade 11",
+      "role": "student_school",
+      "tenantId": "3a9ce7d0-bb31-4e6e-aa1c-4f2aaa04d056"
+    },
+    {
+      "id": "caa5ba1d-e20a-4c80-8d1f-7c91ded53f56",
+      "createdAt": "2026-03-24T08:59:56.668Z",
+      "fullName": "Meera Thomas",
+      "email": "meera@sunrise.demo",
+      "passwordHash": "b7fa6512528ba749ce445573f902dff9:46e6f4ad1af5ab86f64ee44ee1d0ab009340e34ce2b935f3909a65c04660c4906a59e51724a0ae9241d331c22722502933c5dedb018ad6d41aaa2ec091696601",
+      "grade": "Grade 10",
+      "role": "student_school",
+      "tenantId": "3a9ce7d0-bb31-4e6e-aa1c-4f2aaa04d056"
+    },
+    {
+      "id": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+      "createdAt": "2026-03-26T08:59:56.668Z",
+      "fullName": "Nila Joseph",
+      "email": "solo@careerreality.demo",
+      "passwordHash": "a893e9c83f562d5151f2d0def8aec1ba:5f2e08661bc0f5d0f95090ba935fab29e6a4e940d1cd88798abe3024d19b5e2489bd3b5b4c38eef85cc486f9f30f698741796dbf52a3938290f0bb65752f208a",
+      "grade": "Grade 12",
+      "role": "student_individual",
+      "tenantId": null
+    }
+  ],
+  "profiles": [
+    {
+      "id": "441b0b04-6d45-4714-8aa9-b440343b893d",
+      "createdAt": "2026-03-30T08:59:56.837Z",
+      "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+      "basicInfo": {
+        "ageRange": "16-17",
+        "grade": "Grade 11",
+        "favoriteSubjects": "History, Political Science, Physical Education",
+        "favoriteActivities": "NCC drills, team sports, volunteering, structured leadership roles",
+        "topicsCuriousAbout": "Defense strategy, discipline, public service, national leadership",
+        "personalStrengths": "Consistency, calm under pressure, stamina, team accountability",
+        "avoidsOrDislikes": "Chaotic planning, unclear responsibility, repeated excuses"
+      },
+      "questionSet": {
+        "source": "seed",
+        "questions": []
+      },
+      "answers": [],
+      "analysis": {
+        "source": "seed",
+        "summary": "Aarav shows strong signs of Discipline and Leadership. The profile suggests a strong fit for structured, duty-driven careers that reward resilience and accountability.",
+        "characterReadout": "This demo student profile reflects a school-linked learner who performs best when expectations are clear, the mission is meaningful, and personal responsibility is high.",
+        "dominantTraits": [
+          "Discipline",
+          "Leadership",
+          "Resilience",
+          "Physical Stamina"
+        ],
+        "cautionAreas": [
+          "Creativity",
+          "Empathy",
+          "Independence"
+        ],
+        "workPreferences": [
+          "Responds well to structure, routines, and clearly defined responsibility.",
+          "Can stay composed in active environments where teamwork and duty matter.",
+          "Performs better when goals feel mission-driven rather than purely academic."
+        ],
+        "personalityScores": {
+          "analytical": 72,
+          "creativity": 48,
+          "empathy": 60,
+          "resilience": 86,
+          "communication": 74,
+          "discipline": 92,
+          "leadership": 88,
+          "independence": 68,
+          "adaptability": 79,
+          "physicalStamina": 84
+        },
+        "interestSignals": [
+          {
+            "tag": "law-defense",
+            "score": 94,
+            "reason": "The profile strongly leans toward service, defense, and justice-driven responsibility."
+          },
+          {
+            "tag": "public-service",
+            "score": 88,
+            "reason": "Repeated interest in leadership and national service appears across the student basics."
+          },
+          {
+            "tag": "fitness",
+            "score": 78,
+            "reason": "Active routines and stamina-based activities show up consistently."
+          },
+          {
+            "tag": "education",
+            "score": 48,
+            "reason": "Peer support and leadership suggest some mentoring potential."
+          },
+          {
+            "tag": "science",
+            "score": 44,
+            "reason": "Strategic thinking and evidence-based decisions show moderate interest signals."
+          },
+          {
+            "tag": "technology",
+            "score": 36,
+            "reason": "Technology is not a central motivation in this demo profile."
+          }
+        ]
+      },
+      "updatedAt": "2026-03-30T08:59:56.837Z"
+    },
+    {
+      "id": "afefaa3c-a5bd-46f5-b633-0bc76b638f4b",
+      "createdAt": "2026-04-01T08:59:56.837Z",
+      "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+      "basicInfo": {
+        "ageRange": "17-18",
+        "grade": "Grade 12",
+        "favoriteSubjects": "Mathematics, Computer Science, Physics",
+        "favoriteActivities": "Coding side projects, design experiments, logic games, maker clubs",
+        "topicsCuriousAbout": "Software products, AI systems, cybersecurity, startup ideas",
+        "personalStrengths": "Pattern recognition, self-learning, focus, problem solving",
+        "avoidsOrDislikes": "Heavy repetition without purpose, unclear communication, slow bureaucracy"
+      },
+      "questionSet": {
+        "source": "seed",
+        "questions": []
+      },
+      "answers": [],
+      "analysis": {
+        "source": "seed",
+        "summary": "Nila shows strong signs of Analytical thinking and Independence. The profile points toward technology careers that reward focused problem solving and continuous learning.",
+        "characterReadout": "This demo student profile represents an independent learner who enjoys figuring things out, building skills through practice, and staying curious about fast-changing fields.",
+        "dominantTraits": [
+          "Analytical",
+          "Independence",
+          "Discipline",
+          "Adaptability"
+        ],
+        "cautionAreas": [
+          "Physical Stamina",
+          "Empathy",
+          "Leadership"
+        ],
+        "workPreferences": [
+          "Does well in self-driven project work and focused problem-solving blocks.",
+          "Learns quickly when the goal is clear and the challenge feels meaningful.",
+          "Fits best in environments that reward experimentation, curiosity, and disciplined execution."
+        ],
+        "personalityScores": {
+          "analytical": 91,
+          "creativity": 77,
+          "empathy": 52,
+          "resilience": 76,
+          "communication": 68,
+          "discipline": 84,
+          "leadership": 58,
+          "independence": 87,
+          "adaptability": 82,
+          "physicalStamina": 38
+        },
+        "interestSignals": [
+          {
+            "tag": "technology",
+            "score": 96,
+            "reason": "Strong and repeated signals around software, systems, and digital building."
+          },
+          {
+            "tag": "science",
+            "score": 82,
+            "reason": "The profile highlights comfort with logic, experimentation, and technical learning."
+          },
+          {
+            "tag": "creative",
+            "score": 70,
+            "reason": "Design exploration and product thinking show consistent creative interest."
+          },
+          {
+            "tag": "business",
+            "score": 56,
+            "reason": "Startup curiosity adds a moderate commercial interest signal."
+          },
+          {
+            "tag": "hands-on",
+            "score": 52,
+            "reason": "Maker-style projects indicate practical building energy."
+          },
+          {
+            "tag": "education",
+            "score": 38,
+            "reason": "There is some willingness to explain ideas, but it is not the core driver."
+          }
+        ]
+      },
+      "updatedAt": "2026-04-01T08:59:56.837Z"
+    }
+  ],
+  "proofSessions": [
+    {
+      "id": "4490173a-6555-45e9-b440-474fad41ae83",
+      "createdAt": "2026-04-03T08:59:56.842Z",
+      "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+      "careerId": "army-officer",
+      "careerTitle": "Army Officer",
+      "status": "completed",
+      "questionSet": {
+        "source": "seed",
+        "introduction": "Preloaded demo proof session.",
+        "questions": []
+      },
+      "answers": [],
+      "evaluation": {
+        "source": "seed",
+        "overallScore": 84,
+        "points": 840,
+        "readinessBand": "Strong readiness",
+        "dimensionScores": {
+          "discipline": 92,
+          "leadership": 88,
+          "physical-endurance": 91,
+          "family-separation": 78,
+          "risk": 75,
+          "ethics": 82
+        },
+        "strengths": [
+          "Discipline",
+          "Leadership",
+          "Physical Endurance"
+        ],
+        "risks": [
+          "Risk",
+          "Family Separation",
+          "Ethics"
+        ],
+        "narrative": "Aarav currently shows strong readiness for Army Officer because his profile reflects discipline, stamina, and comfort with responsibility. The main growth area is becoming more emotionally ready for separation and high-risk service realities.",
+        "parentSummary": "Army Officer readiness is currently 84%. This suggests a strong fit for structured service, while the biggest family discussion should focus on emotional readiness for separation and long-term duty.",
+        "schoolSummary": "The student earned 840 proof points for Army Officer. School mentors can strengthen high-pressure decision-making, emotional steadiness, and realistic service preparation.",
+        "nextSteps": [
+          "Give the student leadership roles that require calm decision-making under pressure.",
+          "Add reflective routines that build emotional steadiness around sacrifice and separation.",
+          "Expose the student to real service stories so readiness stays realistic, not romanticized."
+        ]
+      },
+      "completedAt": "2026-04-04T08:59:56.842Z"
+    },
+    {
+      "id": "4a0a7e81-0a21-4ebf-b181-d424d9190ab8",
+      "createdAt": "2026-04-05T08:59:56.842Z",
+      "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+      "careerId": "software-engineer",
+      "careerTitle": "Software Engineer",
+      "status": "completed",
+      "questionSet": {
+        "source": "seed",
+        "introduction": "Preloaded demo proof session.",
+        "questions": []
+      },
+      "answers": [],
+      "evaluation": {
+        "source": "seed",
+        "overallScore": 82,
+        "points": 820,
+        "readinessBand": "Strong readiness",
+        "dimensionScores": {
+          "discipline": 84,
+          "ambiguity": 79,
+          "continuous-learning": 88,
+          "problem-solving": 91,
+          "independence": 87
+        },
+        "strengths": [
+          "Problem Solving",
+          "Continuous Learning",
+          "Independence"
+        ],
+        "risks": [
+          "Ambiguity",
+          "Discipline",
+          "Communication"
+        ],
+        "narrative": "Nila currently shows strong readiness for Software Engineer. The strongest evidence appears in problem solving, self-direction, and willingness to keep learning as technology changes.",
+        "parentSummary": "Software Engineer readiness is currently 82%. The student already shows a strong technical mindset, and the main support need is building communication discipline for collaborative work.",
+        "schoolSummary": "The student earned 820 proof points for Software Engineer. Mentors can support growth by adding team-based projects, delivery routines, and feedback-heavy collaboration.",
+        "nextSteps": [
+          "Keep the student in project-based work where problem solving is visible.",
+          "Build stronger communication habits through pair work and demos.",
+          "Repeat deadlines and delivery practice so discipline stays consistent under ambiguity."
+        ]
+      },
+      "completedAt": "2026-04-06T08:59:56.842Z"
+    },
+    {
+      "id": "a60d88ab-1856-4278-9ab7-348e2a743d2a",
+      "createdAt": "2026-04-17T09:58:28.783Z",
+      "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+      "careerId": "travel-consultant",
+      "careerTitle": "Travel Consultant",
+      "status": "completed",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 15-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Travel Consultant.",
+        "questions": [
+          {
+            "id": "proof-travel-consultant-1",
+            "dimension": "service",
+            "question": "How willing are you to put other people’s needs ahead of comfort in this career?",
+            "whyItMatters": "Service is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-2",
+            "dimension": "adaptability",
+            "question": "How strong are you when a job suddenly demands new habits or environments?",
+            "whyItMatters": "Adaptability is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-3",
+            "dimension": "adaptability",
+            "question": "If this career changes fast, how ready are you to keep adjusting instead of resisting?",
+            "whyItMatters": "Adaptability is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-4",
+            "dimension": "composure",
+            "question": "If this career demands calm behavior in front of others, how strong is your composure?",
+            "whyItMatters": "Composure is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-5",
+            "dimension": "adaptability",
+            "question": "If your role changes under pressure, how quickly can you settle into a new rhythm?",
+            "whyItMatters": "Adaptability is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-6",
+            "dimension": "communication",
+            "question": "If success in this career depends on how clearly you speak and listen, how ready are you for that?",
+            "whyItMatters": "Communication is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-7",
+            "dimension": "irregular-hours",
+            "question": "How well can you stay professional when schedules are not comfortable?",
+            "whyItMatters": "Irregular Hours is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-8",
+            "dimension": "service",
+            "question": "How ready are you to help people even when they are tired, upset, or demanding?",
+            "whyItMatters": "Service is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-9",
+            "dimension": "communication",
+            "question": "When a role needs calm communication under pressure, how naturally does that come to you?",
+            "whyItMatters": "Communication is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-10",
+            "dimension": "irregular-hours",
+            "question": "If this career regularly disrupts weekends, holidays, or sleep routines, how ready are you for that tradeoff?",
+            "whyItMatters": "Irregular Hours is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-11",
+            "dimension": "communication",
+            "question": "How well can you explain a difficult idea to someone who is confused or upset?",
+            "whyItMatters": "Communication is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-12",
+            "dimension": "irregular-hours",
+            "question": "If success requires unusual hours, how honestly prepared are you?",
+            "whyItMatters": "Irregular Hours is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-13",
+            "dimension": "service",
+            "question": "If this role is more about service than status, how motivated are you to keep showing up?",
+            "whyItMatters": "Service is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-14",
+            "dimension": "composure",
+            "question": "How well can you stay polite and effective when a situation becomes chaotic?",
+            "whyItMatters": "Composure is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-travel-consultant-15",
+            "dimension": "composure",
+            "question": "If a role expects emotional control as part of professionalism, how ready are you?",
+            "whyItMatters": "Composure is important in Travel Consultant.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": [
+        {
+          "questionId": "proof-travel-consultant-1",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-2",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-3",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-4",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-5",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-6",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-7",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-8",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-9",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-10",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-11",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-12",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-13",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-14",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "proof-travel-consultant-15",
+          "optionIndex": 0
+        }
+      ],
+      "evaluation": {
+        "source": "fallback",
+        "overallScore": 15,
+        "points": 150,
+        "readinessBand": "Low readiness",
+        "dimensionScores": {
+          "service": 15,
+          "adaptability": 15,
+          "composure": 15,
+          "communication": 15,
+          "irregular-hours": 15
+        },
+        "strengths": [
+          "Service",
+          "Adaptability",
+          "Composure"
+        ],
+        "risks": [
+          "Composure",
+          "Communication",
+          "Irregular Hours"
+        ],
+        "narrative": "The student shows low readiness for Travel Consultant. Stronger evidence appears in Service and Adaptability, while Composure needs more deliberate support.",
+        "parentSummary": "Travel Consultant readiness is currently 15%. This score suggests low readiness. Parents should focus on helping the student strengthen Composure without discouraging progress in Service.",
+        "schoolSummary": "The student earned 150 proof points for Travel Consultant. School mentors can support improvement in Composure and Communication through guided experiences and reflective coaching.",
+        "nextSteps": [
+          "Give the student a small real-world challenge that develops Composure.",
+          "Continue exposure projects that use Service.",
+          "Review the proof score again after one month of focused practice."
+        ]
+      },
+      "completedAt": "2026-04-17T10:04:45.960Z"
+    }
+  ],
+  "activityLog": [
+    {
+      "id": "1d5b98ef-c967-4d0a-8661-3fe30a57596d",
+      "createdAt": "2026-04-17T10:04:45.960Z",
+      "type": "proof_completed",
+      "details": {
+        "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+        "careerId": "travel-consultant",
+        "points": 150
+      },
+      "timestamp": "2026-04-17T10:04:45.960Z"
+    },
+    {
+      "id": "89df441a-75c5-4f5d-9678-bee9eabb0fe3",
+      "createdAt": "2026-04-17T08:59:56.842Z",
+      "type": "demo_data_seeded",
+      "details": {
+        "tenantId": "3a9ce7d0-bb31-4e6e-aa1c-4f2aaa04d056",
+        "seededUsers": 4,
+        "seededProfiles": 2,
+        "seededProofSessions": 2
+      },
+      "timestamp": "2026-04-17T08:59:56.842Z"
+    }
+  ]
+}
