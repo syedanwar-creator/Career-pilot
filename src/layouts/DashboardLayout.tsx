@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import { useAuthActions } from "@/features/auth";
 import { dashboardNavItems, routePaths } from "@/routes/paths";
-import { Breadcrumbs, Button, Card, AppNavLink } from "@/shared/components";
+import { Button, AppNavLink } from "@/shared/components";
 import { useAuthStore } from "@/store";
 
 export function DashboardLayout(): JSX.Element {
@@ -31,13 +31,6 @@ export function DashboardLayout(): JSX.Element {
         </div>
       </aside>
       <div className="shell__content">
-        <header className="topbar">
-          <Breadcrumbs />
-          <Card className="topbar__meta">
-            <span>{session?.tenant?.slug || "individual"}</span>
-            <span>{session?.user?.email || ""}</span>
-          </Card>
-        </header>
         <Outlet />
       </div>
     </div>

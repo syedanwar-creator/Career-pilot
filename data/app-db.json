@@ -807,6 +807,201 @@
         ]
       },
       "completedAt": "2026-04-17T10:04:45.960Z"
+    },
+    {
+      "id": "e26bd140-e03c-4ac6-8393-08ff00125cee",
+      "createdAt": "2026-04-17T14:45:34.703Z",
+      "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+      "careerId": "judge",
+      "careerTitle": "Judge",
+      "status": "draft",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 15-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Judge.",
+        "questions": [
+          {
+            "id": "proof-judge-1",
+            "dimension": "risk",
+            "question": "If danger cannot be ignored in this role, how mentally stable are you under that idea?",
+            "whyItMatters": "Risk is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-2",
+            "dimension": "family-separation",
+            "question": "How strong are you when commitment means missing comfort, home, or familiar support?",
+            "whyItMatters": "Family Separation is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-3",
+            "dimension": "ethics",
+            "question": "How willing are you to follow ethical standards even under pressure from others?",
+            "whyItMatters": "Ethics is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-4",
+            "dimension": "leadership",
+            "question": "How well can you make decisions for a group when nobody feels fully certain?",
+            "whyItMatters": "Leadership is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-5",
+            "dimension": "risk",
+            "question": "If this career includes real personal risk, how honestly prepared are you for that reality?",
+            "whyItMatters": "Risk is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-6",
+            "dimension": "discipline",
+            "question": "If this career expects daily discipline even when no one is watching, how ready are you for that reality?",
+            "whyItMatters": "Discipline is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-7",
+            "dimension": "family-separation",
+            "question": "If this career requires staying away from parents or family for long periods, how ready are you mentally?",
+            "whyItMatters": "Family Separation is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-8",
+            "dimension": "risk",
+            "question": "How do you respond when courage is needed but fear is still present?",
+            "whyItMatters": "Risk is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-9",
+            "dimension": "leadership",
+            "question": "If others depend on you for direction in this career, how ready are you to lead responsibly?",
+            "whyItMatters": "Leadership is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-10",
+            "dimension": "leadership",
+            "question": "If this role places people under your guidance, how seriously do you take that trust?",
+            "whyItMatters": "Leadership is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-11",
+            "dimension": "ethics",
+            "question": "If this career asks you to do the right thing when it is inconvenient, how would you behave?",
+            "whyItMatters": "Ethics is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-12",
+            "dimension": "discipline",
+            "question": "When a routine becomes boring but still important, how likely are you to keep doing it well?",
+            "whyItMatters": "Discipline is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-13",
+            "dimension": "discipline",
+            "question": "If progress in this career is slow for months, how strong is your commitment to stay consistent?",
+            "whyItMatters": "Discipline is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-14",
+            "dimension": "family-separation",
+            "question": "If service asks for distance from family, how likely are you to stay focused on duty?",
+            "whyItMatters": "Family Separation is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-judge-15",
+            "dimension": "ethics",
+            "question": "When power or authority is involved, how important is personal integrity to you?",
+            "whyItMatters": "Ethics is important in Judge.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": []
     }
   ],
   "activityLog": [

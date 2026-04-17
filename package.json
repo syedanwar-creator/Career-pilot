@@ -4,6 +4,7 @@
   "private": true,
   "description": "Multi-tenant career readiness platform with AI-assisted profiling and career proof scoring",
   "scripts": {
+    "dev": "node scripts/dev.js",
     "start": "node server.js",
     "dev:server": "node server.js",
     "dev:client": "vite",
