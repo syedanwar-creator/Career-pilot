@@ -1,4 +1,4 @@
-import { startTransition, useCallback, useDeferredValue, useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 
 import { dashboardApi } from "@/features/dashboard/api";
 import type { Career } from "@/features/dashboard/types";
@@ -9,19 +9,15 @@ function buildCareerCategories(careers: Career[]): string[] {
 }
 
 export function useCareerExplorerPage(): {
-  careers: Career[];
   filteredCareers: Career[];
-  selectedCareer: Career | null;
   categories: string[];
   search: string;
   category: string;
   isLoading: boolean;
   setSearch: (value: string) => void;
   setCategory: (value: string) => void;
-  selectCareer: (careerId: string) => void;
 } {
   const [careers, setCareers] = useState<Career[]>([]);
-  const [selectedCareerId, setSelectedCareerId] = useState<string>("");
   const [search, setSearch] = useState<string>("");
   const [category, setCategory] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -42,7 +38,6 @@ export function useCareerExplorerPage(): {
         }
 
         setCareers(response.careers);
-        setSelectedCareerId(response.careers[0]?.id || "");
       })
       .catch((error: Error) => {
         if (!isActive) {
@@ -78,39 +73,15 @@ export function useCareerExplorerPage(): {
     });
   }, [careers, deferredCategory, deferredSearch]);
 
-  useEffect(() => {
-    if (!filteredCareers.length) {
-      return;
-    }
-
-    if (!filteredCareers.some((career) => career.id === selectedCareerId)) {
-      setSelectedCareerId(filteredCareers[0].id);
-    }
-  }, [filteredCareers, selectedCareerId]);
-
   const categories = useMemo(() => buildCareerCategories(careers), [careers]);
 
-  const selectedCareer = useMemo(
-    () => filteredCareers.find((career) => career.id === selectedCareerId) || careers.find((career) => career.id === selectedCareerId) || null,
-    [careers, filteredCareers, selectedCareerId]
-  );
-
-  const selectCareer = useCallback((careerId: string) => {
-    startTransition(() => {
-      setSelectedCareerId(careerId);
-    });
-  }, []);
-
   return {
-    careers,
     filteredCareers,
-    selectedCareer,
     categories,
     search,
     category,
     isLoading,
     setSearch,
-    setCategory,
-    selectCareer
+    setCategory
   };
 }

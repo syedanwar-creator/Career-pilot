@@ -9,6 +9,7 @@ export const routePaths = {
   admin: "/admin",
   dashboardProfile: "/dashboard/profile",
   dashboardCareers: "/dashboard/careers",
+  dashboardCareerDetail: "/dashboard/careers/:careerId",
   dashboardProof: "/dashboard/proof",
   settingsProfile: "/settings/profile",
   settingsSecurity: "/settings/security",
@@ -16,6 +17,10 @@ export const routePaths = {
   adminStudents: "/admin/students",
   adminCareers: "/admin/careers"
 } as const;
+
+export function buildDashboardCareerDetailPath(careerId: string): string {
+  return `/dashboard/careers/${careerId}`;
+}
 
 export const dashboardNavItems = [
   { to: routePaths.dashboard, label: "Overview", end: true },

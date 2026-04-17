@@ -28,6 +28,7 @@ const resetPasswordPageImport: PageImporter = () => import("@/pages/reset-passwo
 const dashboardHomePageImport: PageImporter = () => import("@/pages/dashboard-home");
 const dashboardProfilePageImport: PageImporter = () => import("@/pages/dashboard-profile");
 const dashboardCareersPageImport: PageImporter = () => import("@/pages/dashboard-careers");
+const dashboardCareerDetailPageImport: PageImporter = () => import("@/pages/dashboard-career-detail");
 const dashboardProofPageImport: PageImporter = () => import("@/pages/dashboard-proof");
 const settingsProfilePageImport: PageImporter = () => import("@/pages/settings-profile");
 const settingsSecurityPageImport: PageImporter = () => import("@/pages/settings-security");
@@ -190,6 +191,18 @@ const routeDefinitions: RouteDefinition[] = [
               label: "Careers",
               icon: "briefcase",
               parent: "dashboard",
+              section: "dashboard",
+              requiresAuth: true
+            }
+          },
+          {
+            path: "careers/:careerId",
+            element: lazyElement(dashboardCareerDetailPageImport, createElement(ContentPageSkeleton), "Career detail"),
+            meta: {
+              id: "dashboard-career-detail",
+              label: "Career Detail",
+              icon: "briefcase",
+              parent: "dashboard-careers",
               section: "dashboard",
               requiresAuth: true
             }
