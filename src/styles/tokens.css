@@ -1,0 +1,79 @@
+:root {
+  --color-surface-page: #fbf7f2;
+  --color-surface-page-alt: #f3ede3;
+  --color-surface-panel: rgba(255, 253, 249, 0.96);
+  --color-surface-card: rgba(255, 255, 255, 0.94);
+  --color-surface-muted: #efe8de;
+  --color-surface-interactive: #ffffff;
+  --color-surface-interactive-hover: #f7f1e8;
+  --color-surface-interactive-active: #efe6da;
+  --color-surface-disabled: #ebe4da;
+  --color-text-primary: #1e2430;
+  --color-text-secondary: #4f5867;
+  --color-text-caption: #5a6677;
+  --color-text-inverse: #ffffff;
+  --color-border-subtle: #8a8175;
+  --color-border-strong: #615a52;
+  --color-border-focus: #165c68;
+  --color-border-disabled: #b9b0a5;
+  --color-action-primary: #9a4b22;
+  --color-action-primary-hover: #7e3d1b;
+  --color-action-primary-active: #663115;
+  --color-action-secondary: #ffffff;
+  --color-action-secondary-hover: #f6f1e7;
+  --color-action-secondary-active: #ede4d9;
+  --color-action-secondary-text: #1e2430;
+  --color-feedback-success: #1d6946;
+  --color-feedback-success-surface: #e6f3ea;
+  --color-feedback-warning: #8a4a23;
+  --color-feedback-warning-surface: #f8ebe1;
+  --color-feedback-error: #8a2f2f;
+  --color-feedback-error-surface: #fae8e8;
+  --color-feedback-info: #165c68;
+  --color-feedback-info-surface: #e5f1f3;
+  --color-decoration-primary: rgba(154, 75, 34, 0.12);
+  --color-decoration-secondary: rgba(22, 92, 104, 0.1);
+  --shadow-panel: 0 16px 48px rgba(30, 36, 48, 0.1);
+  --shadow-focus: 0 0 0 2px var(--color-text-inverse), 0 0 0 4px var(--color-border-focus);
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+
+  --radius-control: 16px;
+  --radius-card: 16px;
+  --radius-panel: 24px;
+  --radius-chip: 999px;
+
+  --font-family-heading: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-family-body: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --font-size-h1: clamp(2rem, 4vw, 3rem);
+  --font-size-h2: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+
+  --line-height-heading: 1.25;
+  --line-height-body: 1.6;
+  --line-height-caption: 1.4;
+
+  --font-weight-body: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --duration-micro: 120ms;
+  --duration-panel: 240ms;
+  --easing-standard: ease;
+
+  --z-base: 0;
+  --z-card: 10;
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}

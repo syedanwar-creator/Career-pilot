@@ -1,4 +1,5 @@
 const http = require("http");
+const crypto = require("crypto");
 
 const { analyzeProfile, evaluateProofSession, generateProfileQuestionSet, generateProofQuestionSet } = require("./src/server/assessment");
 const { buildLogoutCookie, buildSessionCookie, hashPassword, parseSessionToken, sessionCookieName, verifyPassword } = require("./src/server/auth");
@@ -65,6 +66,22 @@ function createTenantJoinCode(name) {
     .padEnd(4, "X");
   const suffix = Math.random().toString(36).slice(2, 8).toUpperCase();
   return `${prefix}-${suffix}`;
+}
+
+function buildSettingsPayload(user, tenant) {
+  return {
+    fullName: user.fullName,
+    email: user.email,
+    grade: user.grade || "",
+    role: user.role,
+    tenant: tenant
+      ? {
+          id: tenant.id,
+          name: tenant.name,
+          slug: tenant.slug
+        }
+      : null
+  };
 }
 
 function summarizeProofSession(session) {
@@ -217,6 +234,82 @@ async function handleLogin(request, response) {
   );
 }
 
+async function handleForgotPassword(request, response) {
+  const body = await parseJsonBody(request);
+  const email = String(body.email || "").trim().toLowerCase();
+
+  assert(email, 400, "Email is required.");
+
+  let preview = null;
+
+  mutateDb((db) => {
+    const user = findUserByEmail(db, email);
+
+    db.passwordResetTokens = db.passwordResetTokens.filter((item) => item.expiresAt > new Date().toISOString() && item.email !== email);
+
+    if (!user) {
+      return db;
+    }
+
+    const token = crypto.randomBytes(24).toString("hex");
+    const expiresAt = new Date(Date.now() + 60 * 60 * 1000).toISOString();
+
+    db.passwordResetTokens.push(
+      createRecord({
+        email,
+        userId: user.id,
+        token,
+        expiresAt
+      })
+    );
+
+    logActivity(db, "password_reset_requested", {
+      userId: user.id
+    });
+
+    preview = {
+      resetToken: token,
+      resetUrl: `/reset-password/${token}`
+    };
+
+    return db;
+  });
+
+  sendJson(response, 200, {
+    ok: true,
+    message: "If an account exists for that email, a reset path has been prepared.",
+    ...(process.env.NODE_ENV === "production" ? {} : preview || {})
+  });
+}
+
+async function handleResetPassword(request, response, token) {
+  const body = await parseJsonBody(request);
+  assert(body.password && body.password.length >= 6, 400, "Password must be at least 6 characters.");
+
+  mutateDb((db) => {
+    const resetRecord = db.passwordResetTokens.find((item) => item.token === token);
+    assert(resetRecord, 404, "Reset token not found.");
+    assert(new Date(resetRecord.expiresAt) > new Date(), 410, "Reset token has expired.");
+
+    const user = db.users.find((item) => item.id === resetRecord.userId);
+    assert(user, 404, "User not found for this reset token.");
+
+    user.passwordHash = hashPassword(body.password);
+    db.passwordResetTokens = db.passwordResetTokens.filter((item) => item.userId !== user.id);
+
+    logActivity(db, "password_reset_completed", {
+      userId: user.id
+    });
+
+    return db;
+  });
+
+  sendJson(response, 200, {
+    ok: true,
+    message: "Password updated successfully."
+  });
+}
+
 function handleSession(request, response) {
   const context = getSessionContext(request);
 
@@ -247,6 +340,73 @@ function handleLogout(response) {
     { ok: true },
     { "Set-Cookie": buildLogoutCookie() }
   );
+}
+
+function handleSettingsGet(request, response) {
+  const context = getSessionContext(request);
+  const user = requireAuth(context);
+
+  sendJson(response, 200, {
+    settings: buildSettingsPayload(user, context.tenant)
+  });
+}
+
+async function handleSettingsProfileUpdate(request, response) {
+  const context = getSessionContext(request);
+  const user = requireAuth(context);
+  const body = await parseJsonBody(request);
+
+  assert(String(body.fullName || "").trim(), 400, "Full name is required.");
+
+  const updatedDb = mutateDb((db) => {
+    const storedUser = db.users.find((item) => item.id === user.id);
+    assert(storedUser, 404, "User not found.");
+
+    storedUser.fullName = String(body.fullName).trim();
+    storedUser.grade = String(body.grade || "").trim();
+
+    logActivity(db, "settings_profile_updated", {
+      userId: storedUser.id
+    });
+
+    return db;
+  });
+
+  const updatedUser = updatedDb.users.find((item) => item.id === user.id);
+  const tenant = updatedUser?.tenantId ? updatedDb.tenants.find((item) => item.id === updatedUser.tenantId) || null : null;
+
+  sendJson(response, 200, {
+    settings: buildSettingsPayload(updatedUser, tenant)
+  });
+}
+
+async function handleSettingsPasswordUpdate(request, response) {
+  const context = getSessionContext(request);
+  const user = requireAuth(context);
+  const body = await parseJsonBody(request);
+
+  assert(body.currentPassword, 400, "Current password is required.");
+  assert(body.newPassword && body.newPassword.length >= 6, 400, "New password must be at least 6 characters.");
+  assert(verifyPassword(body.currentPassword, user.passwordHash), 401, "Current password is incorrect.");
+
+  mutateDb((db) => {
+    const storedUser = db.users.find((item) => item.id === user.id);
+    assert(storedUser, 404, "User not found.");
+
+    storedUser.passwordHash = hashPassword(body.newPassword);
+    db.passwordResetTokens = db.passwordResetTokens.filter((item) => item.userId !== storedUser.id);
+
+    logActivity(db, "settings_password_updated", {
+      userId: storedUser.id
+    });
+
+    return db;
+  });
+
+  sendJson(response, 200, {
+    ok: true,
+    message: "Password updated successfully."
+  });
 }
 
 function handleStudentDashboard(request, response) {
@@ -579,8 +739,19 @@ async function routeApi(request, response, pathname) {
     return true;
   }
 
+  if (request.method === "POST" && pathname === "/api/auth/forgot-password") {
+    await handleForgotPassword(request, response);
+    return true;
+  }
+
   if (request.method === "POST" && pathname === "/api/auth/logout") {
     handleLogout(response);
+    return true;
+  }
+
+  const resetPasswordMatch = pathname.match(/^\/api\/auth\/reset-password\/([a-z0-9]+)$/);
+  if (request.method === "POST" && resetPasswordMatch) {
+    await handleResetPassword(request, response, resetPasswordMatch[1]);
     return true;
   }
 
@@ -591,6 +762,21 @@ async function routeApi(request, response, pathname) {
 
   if (request.method === "GET" && pathname === "/api/profile") {
     handleProfileGet(request, response);
+    return true;
+  }
+
+  if (request.method === "GET" && pathname === "/api/settings/profile") {
+    handleSettingsGet(request, response);
+    return true;
+  }
+
+  if (request.method === "PUT" && pathname === "/api/settings/profile") {
+    await handleSettingsProfileUpdate(request, response);
+    return true;
+  }
+
+  if (request.method === "PUT" && pathname === "/api/settings/password") {
+    await handleSettingsPasswordUpdate(request, response);
     return true;
   }
 
