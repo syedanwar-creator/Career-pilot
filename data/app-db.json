@@ -76,76 +76,268 @@
         "avoidsOrDislikes": "Chaotic planning, unclear responsibility, repeated excuses"
       },
       "questionSet": {
-        "source": "seed",
-        "questions": []
+        "source": "fallback",
+        "questions": [
+          {
+            "id": "communication-1",
+            "dimension": "communication",
+            "question": "If you need to explain an idea to others, how do you usually do it?",
+            "whyItMatters": "This reveals clarity and confidence in communication.",
+            "options": [
+              "I avoid explaining because I am uncomfortable.",
+              "I speak, but people often leave confused.",
+              "I can explain clearly when I prepare.",
+              "I usually simplify ideas well and adjust for the audience."
+            ]
+          },
+          {
+            "id": "adaptability-2",
+            "dimension": "adaptability",
+            "question": "What happens when plans suddenly change?",
+            "whyItMatters": "This shows flexibility in uncertain environments.",
+            "options": [
+              "I become frustrated and stop performing well.",
+              "I need a lot of time to recover.",
+              "I adjust after a short pause.",
+              "I adapt quickly and find a workable new path."
+            ]
+          },
+          {
+            "id": "analytical-3",
+            "dimension": "analytical",
+            "question": "What feels most natural when you face a complex problem?",
+            "whyItMatters": "This reveals comfort with logic and patterns.",
+            "options": [
+              "I avoid it if I can.",
+              "I try random solutions until one works.",
+              "I compare a few possibilities and choose one.",
+              "I look for patterns, causes, and evidence before deciding."
+            ]
+          },
+          {
+            "id": "independence-4",
+            "dimension": "independence",
+            "question": "When a decision is yours to make, what usually happens?",
+            "whyItMatters": "This measures comfort with personal ownership.",
+            "options": [
+              "I delay until someone else decides.",
+              "I decide quickly without much thought.",
+              "I decide after thinking through the main options.",
+              "I take ownership, assess the tradeoffs, and decide with confidence."
+            ]
+          },
+          {
+            "id": "discipline-5",
+            "dimension": "discipline",
+            "question": "How do you handle long-term work that has to be done consistently?",
+            "whyItMatters": "This measures discipline and follow-through.",
+            "options": [
+              "I only do it when someone pushes me.",
+              "I start well but often stop.",
+              "I can stay consistent if the goal matters to me.",
+              "I build routines and keep going even when motivation drops."
+            ]
+          },
+          {
+            "id": "physicalStamina-6",
+            "dimension": "physicalStamina",
+            "question": "How do you feel about work that may require long hours on your feet or active movement?",
+            "whyItMatters": "This measures comfort with physically demanding roles.",
+            "options": [
+              "I strongly prefer to avoid it.",
+              "I can handle it rarely, but not often.",
+              "I can manage it if the work matters.",
+              "I am comfortable with active, physically demanding routines."
+            ]
+          },
+          {
+            "id": "leadership-7",
+            "dimension": "leadership",
+            "question": "How do you react when a team result depends partly on you?",
+            "whyItMatters": "This checks ownership under shared responsibility.",
+            "options": [
+              "I avoid responsibility because I do not want the pressure.",
+              "I do only my own part and hope the rest works out.",
+              "I take responsibility for my part and support others if needed.",
+              "I actively coordinate, communicate, and protect the final outcome."
+            ]
+          },
+          {
+            "id": "resilience-8",
+            "dimension": "resilience",
+            "question": "What happens when your first attempt fails?",
+            "whyItMatters": "This checks recovery after setbacks.",
+            "options": [
+              "I usually give up quickly.",
+              "I feel upset and need a long time before trying again.",
+              "I recover after some thought and try another approach.",
+              "I learn from the setback, adjust fast, and continue."
+            ]
+          },
+          {
+            "id": "resilience-9",
+            "dimension": "resilience",
+            "question": "How do you react when pressure builds close to a deadline?",
+            "whyItMatters": "This measures emotional steadiness under stress.",
+            "options": [
+              "I freeze or avoid the work.",
+              "I panic and lose quality.",
+              "I feel stress but can still finish the work.",
+              "I stay composed, prioritize, and keep moving."
+            ]
+          },
+          {
+            "id": "independence-10",
+            "dimension": "independence",
+            "question": "How comfortable are you working alone for a long stretch?",
+            "whyItMatters": "This shows independence and self-direction.",
+            "options": [
+              "I really struggle without constant support nearby.",
+              "I can work alone for a short time only.",
+              "I can stay on track alone if I know the goal.",
+              "I work well independently and keep myself moving."
+            ]
+          },
+          {
+            "id": "empathy-11",
+            "dimension": "empathy",
+            "question": "During a disagreement, what matters most to you?",
+            "whyItMatters": "This shows whether the student can respect other viewpoints.",
+            "options": [
+              "Winning the argument as fast as possible.",
+              "Ending the discussion even if the other person feels unheard.",
+              "Finding a fair solution if possible.",
+              "Understanding both sides and helping the situation settle constructively."
+            ]
+          },
+          {
+            "id": "empathy-12",
+            "dimension": "empathy",
+            "question": "When a friend is struggling, what do you naturally do?",
+            "whyItMatters": "This measures emotional awareness and support.",
+            "options": [
+              "I avoid getting involved.",
+              "I listen for a moment but move on quickly.",
+              "I try to understand and help if I can.",
+              "I actively listen, notice feelings, and stay present until they feel supported."
+            ]
+          }
+        ]
       },
-      "answers": [],
+      "answers": [
+        {
+          "questionId": "communication-1",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "adaptability-2",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "analytical-3",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "independence-4",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "discipline-5",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "physicalStamina-6",
+          "optionIndex": 1
+        },
+        {
+          "questionId": "leadership-7",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "resilience-8",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "resilience-9",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "independence-10",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "empathy-11",
+          "optionIndex": 0
+        },
+        {
+          "questionId": "empathy-12",
+          "optionIndex": 0
+        }
+      ],
       "analysis": {
-        "source": "seed",
-        "summary": "Aarav shows strong signs of Discipline and Leadership. The profile suggests a strong fit for structured, duty-driven careers that reward resilience and accountability.",
-        "characterReadout": "This demo student profile reflects a school-linked learner who performs best when expectations are clear, the mission is meaningful, and personal responsibility is high.",
+        "source": "fallback",
+        "summary": "Aarav Menon shows stronger signs of Leadership and Adaptability. The current profile suggests promise, but also a need to keep developing Empathy and Communication.",
+        "characterReadout": "This is a readiness-oriented interpretation based on how the student answered scenario-style questions and described their current interests.",
         "dominantTraits": [
-          "Discipline",
           "Leadership",
-          "Resilience",
-          "Physical Stamina"
+          "Adaptability",
+          "Creativity",
+          "Analytical"
         ],
         "cautionAreas": [
-          "Creativity",
           "Empathy",
+          "Communication",
           "Independence"
         ],
         "workPreferences": [
-          "Responds well to structure, routines, and clearly defined responsibility.",
-          "Can stay composed in active environments where teamwork and duty matter.",
-          "Performs better when goals feel mission-driven rather than purely academic."
+          "May perform better with guidance, team rhythm, and visible support."
         ],
         "personalityScores": {
-          "analytical": 72,
-          "creativity": 48,
-          "empathy": 60,
-          "resilience": 86,
-          "communication": 74,
-          "discipline": 92,
-          "leadership": 88,
-          "independence": 68,
-          "adaptability": 79,
-          "physicalStamina": 84
+          "analytical": 50,
+          "creativity": 55,
+          "empathy": 25,
+          "resilience": 50,
+          "communication": 25,
+          "discipline": 50,
+          "leadership": 75,
+          "independence": 25,
+          "adaptability": 75,
+          "physicalStamina": 50
         },
         "interestSignals": [
           {
             "tag": "law-defense",
-            "score": 94,
-            "reason": "The profile strongly leans toward service, defense, and justice-driven responsibility."
+            "score": 66,
+            "reason": "Keywords in the profile point toward law-defense."
           },
           {
             "tag": "public-service",
-            "score": 88,
-            "reason": "Repeated interest in leadership and national service appears across the student basics."
-          },
-          {
-            "tag": "fitness",
-            "score": 78,
-            "reason": "Active routines and stamina-based activities show up consistently."
-          },
-          {
-            "tag": "education",
             "score": 48,
-            "reason": "Peer support and leadership suggest some mentoring potential."
+            "reason": "Keywords in the profile point toward public-service."
           },
           {
             "tag": "science",
-            "score": 44,
-            "reason": "Strategic thinking and evidence-based decisions show moderate interest signals."
+            "score": 48,
+            "reason": "Keywords in the profile point toward science."
+          },
+          {
+            "tag": "creative",
+            "score": 48,
+            "reason": "Keywords in the profile point toward creative."
+          },
+          {
+            "tag": "fitness",
+            "score": 48,
+            "reason": "Keywords in the profile point toward fitness."
           },
           {
             "tag": "technology",
-            "score": 36,
-            "reason": "Technology is not a central motivation in this demo profile."
+            "score": 30,
+            "reason": "No strong direct evidence yet for technology."
           }
         ]
       },
-      "updatedAt": "2026-03-30T08:59:56.837Z"
+      "updatedAt": "2026-04-17T17:55:47.703Z"
     },
     {
       "id": "afefaa3c-a5bd-46f5-b633-0bc76b638f4b",
@@ -1002,9 +1194,214 @@
         ]
       },
       "answers": []
+    },
+    {
+      "id": "b33ded0e-37b8-43db-a4c0-db1f9e0d7868",
+      "createdAt": "2026-04-17T17:38:12.090Z",
+      "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+      "careerId": "nurse",
+      "careerTitle": "Nurse",
+      "status": "draft",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 15-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Nurse.",
+        "questions": [
+          {
+            "id": "proof-nurse-1",
+            "dimension": "discipline",
+            "question": "When a routine becomes boring but still important, how likely are you to keep doing it well?",
+            "whyItMatters": "Discipline is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-2",
+            "dimension": "emotional-resilience",
+            "question": "How well can you recover after emotionally heavy days?",
+            "whyItMatters": "Emotional Resilience is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-3",
+            "dimension": "service",
+            "question": "How willing are you to put other people’s needs ahead of comfort in this career?",
+            "whyItMatters": "Service is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-4",
+            "dimension": "ethics",
+            "question": "How willing are you to follow ethical standards even under pressure from others?",
+            "whyItMatters": "Ethics is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-5",
+            "dimension": "service",
+            "question": "How ready are you to help people even when they are tired, upset, or demanding?",
+            "whyItMatters": "Service is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-6",
+            "dimension": "discipline",
+            "question": "If this career expects daily discipline even when no one is watching, how ready are you for that reality?",
+            "whyItMatters": "Discipline is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-7",
+            "dimension": "precision",
+            "question": "How naturally do you slow down and review details when accuracy matters?",
+            "whyItMatters": "Precision is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-8",
+            "dimension": "precision",
+            "question": "If this role demands precision again and again, how well can you stay sharp?",
+            "whyItMatters": "Precision is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-9",
+            "dimension": "ethics",
+            "question": "When power or authority is involved, how important is personal integrity to you?",
+            "whyItMatters": "Ethics is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-10",
+            "dimension": "service",
+            "question": "If this role is more about service than status, how motivated are you to keep showing up?",
+            "whyItMatters": "Service is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-11",
+            "dimension": "discipline",
+            "question": "If progress in this career is slow for months, how strong is your commitment to stay consistent?",
+            "whyItMatters": "Discipline is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-12",
+            "dimension": "precision",
+            "question": "If one small mistake in this career can cause serious problems, how ready are you to work carefully?",
+            "whyItMatters": "Precision is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-13",
+            "dimension": "emotional-resilience",
+            "question": "If a role regularly tests your emotional strength, how prepared are you to stay functional and kind?",
+            "whyItMatters": "Emotional Resilience is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-14",
+            "dimension": "emotional-resilience",
+            "question": "If this career exposes you to pain, setbacks, or difficult human situations, how steady can you remain?",
+            "whyItMatters": "Emotional Resilience is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-nurse-15",
+            "dimension": "ethics",
+            "question": "If this career asks you to do the right thing when it is inconvenient, how would you behave?",
+            "whyItMatters": "Ethics is important in Nurse.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": []
     }
   ],
   "activityLog": [
+    {
+      "id": "ee005109-59df-44ee-a133-ea44eedd03fc",
+      "createdAt": "2026-04-17T17:55:47.703Z",
+      "type": "profile_submitted",
+      "details": {
+        "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+        "tenantId": "3a9ce7d0-bb31-4e6e-aa1c-4f2aaa04d056"
+      },
+      "timestamp": "2026-04-17T17:55:47.703Z"
+    },
     {
       "id": "95295dcb-4b62-450a-b805-cab4ea87cd37",
       "createdAt": "2026-04-17T12:07:28.531Z",

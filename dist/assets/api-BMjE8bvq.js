@@ -1,1 +1,0 @@
-import{k as e}from"./index-m4N6d6E8.js";const i={getProfileSettings(){return e.get("/api/settings/profile")},updateProfileSettings(t){return e.put("/api/settings/profile",t)},updatePassword(t){return e.put("/api/settings/password",t)}};export{i as s};

@@ -50,6 +50,7 @@ export const CareerExplorer = memo(function CareerExplorer({
               id="career-search"
               className="input"
               value={search}
+              placeholder="🔍  Search careers, e.g. Engineer, Doctor..."
               onChange={(event) => onSearchChange(event.target.value)}
             />
           </Field>
@@ -93,7 +94,9 @@ export const CareerExplorer = memo(function CareerExplorer({
                     <p className="eyebrow">{career.category}</p>
                     <h3>{career.title}</h3>
                   </div>
-                  <span className="pill">Demand {career.futureOutlook.demandScore}%</span>
+                  <span style={{ display:"inline-flex", alignItems:"center", padding:"3px 9px", borderRadius:"999px", background:"rgba(99,102,241,0.1)", border:"1px solid rgba(99,102,241,0.2)", fontSize:"11px", fontWeight:700, color:"#6366f1", flexShrink:0 }}>
+                    {career.futureOutlook.demandScore}% demand
+                  </span>
                 </div>
                 <p>{career.summary}</p>
               </button>
@@ -110,8 +113,12 @@ export const CareerExplorer = memo(function CareerExplorer({
                   <h2>{selectedCareer.title}</h2>
                 </div>
                 <div className="actions">
-                  <span className="pill">Resilience {selectedCareer.crisisResilience.score}%</span>
-                  <span className="pill">Demand {selectedCareer.futureOutlook.demandScore}%</span>
+                  <span style={{ display:"inline-flex", alignItems:"center", padding:"4px 10px", borderRadius:"999px", background:"#dcfce7", border:"1px solid #86efac", fontSize:"12px", fontWeight:700, color:"#16a34a" }}>
+                    ✓ {selectedCareer.crisisResilience.score}% resilience
+                  </span>
+                  <span style={{ display:"inline-flex", alignItems:"center", padding:"4px 10px", borderRadius:"999px", background:"rgba(99,102,241,0.1)", border:"1px solid rgba(99,102,241,0.2)", fontSize:"12px", fontWeight:700, color:"#6366f1" }}>
+                    {selectedCareer.futureOutlook.demandScore}% demand
+                  </span>
                 </div>
               </div>
               <p>{selectedCareer.summary}</p>

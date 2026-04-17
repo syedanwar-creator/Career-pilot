@@ -1,41 +1,55 @@
 :root {
-  --color-surface-page: #fbf7f2;
-  --color-surface-page-alt: #f3ede3;
-  --color-surface-panel: rgba(255, 253, 249, 0.96);
-  --color-surface-card: rgba(255, 255, 255, 0.94);
-  --color-surface-muted: #efe8de;
-  --color-surface-interactive: #ffffff;
-  --color-surface-interactive-hover: #f7f1e8;
-  --color-surface-interactive-active: #efe6da;
-  --color-surface-disabled: #ebe4da;
-  --color-text-primary: #1e2430;
-  --color-text-secondary: #4f5867;
-  --color-text-caption: #5a6677;
-  --color-text-inverse: #ffffff;
-  --color-border-subtle: #8a8175;
-  --color-border-strong: #615a52;
-  --color-border-focus: #165c68;
-  --color-border-disabled: #b9b0a5;
-  --color-action-primary: #9a4b22;
-  --color-action-primary-hover: #7e3d1b;
-  --color-action-primary-active: #663115;
-  --color-action-secondary: #ffffff;
-  --color-action-secondary-hover: #f6f1e7;
-  --color-action-secondary-active: #ede4d9;
-  --color-action-secondary-text: #1e2430;
-  --color-feedback-success: #1d6946;
-  --color-feedback-success-surface: #e6f3ea;
-  --color-feedback-warning: #8a4a23;
-  --color-feedback-warning-surface: #f8ebe1;
-  --color-feedback-error: #8a2f2f;
-  --color-feedback-error-surface: #fae8e8;
-  --color-feedback-info: #165c68;
-  --color-feedback-info-surface: #e5f1f3;
-  --color-decoration-primary: rgba(154, 75, 34, 0.12);
-  --color-decoration-secondary: rgba(22, 92, 104, 0.1);
-  --shadow-panel: 0 16px 48px rgba(30, 36, 48, 0.1);
-  --shadow-focus: 0 0 0 2px var(--color-text-inverse), 0 0 0 4px var(--color-border-focus);
+  /* --- Surfaces --- */
+  --color-surface-page:                #f8fafc;
+  --color-surface-page-alt:            #f1f5f9;
+  --color-surface-panel:               rgba(255, 255, 255, 0.98);
+  --color-surface-card:                rgba(255, 255, 255, 0.95);
+  --color-surface-muted:               #e2e8f0;
+  --color-surface-interactive:         #ffffff;
+  --color-surface-interactive-hover:   #f8fafc;
+  --color-surface-interactive-active:  #eff6ff;
+  --color-surface-disabled:            #f1f5f9;
 
+  /* --- Text --- */
+  --color-text-primary:   #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-caption:   #94a3b8;
+  --color-text-inverse:   #ffffff;
+
+  /* --- Borders --- */
+  --color-border-subtle:   #e2e8f0;
+  --color-border-strong:   #cbd5e1;
+  --color-border-focus:    #6366f1;
+  --color-border-disabled: #e2e8f0;
+
+  /* --- Actions (Indigo primary) --- */
+  --color-action-primary:        #4f46e5;
+  --color-action-primary-hover:  #4338ca;
+  --color-action-primary-active: #3730a3;
+  --color-action-secondary:             #ffffff;
+  --color-action-secondary-hover:       #f8fafc;
+  --color-action-secondary-active:      #eff6ff;
+  --color-action-secondary-text:        #0f172a;
+
+  /* --- Feedback --- */
+  --color-feedback-success:         #16a34a;
+  --color-feedback-success-surface: #f0fdf4;
+  --color-feedback-warning:         #d97706;
+  --color-feedback-warning-surface: #fffbeb;
+  --color-feedback-error:           #dc2626;
+  --color-feedback-error-surface:   #fef2f2;
+  --color-feedback-info:            #6366f1;
+  --color-feedback-info-surface:    rgba(99, 102, 241, 0.08);
+
+  /* --- Decoration --- */
+  --color-decoration-primary:   rgba(99, 102, 241, 0.07);
+  --color-decoration-secondary: rgba(139, 92, 246, 0.05);
+
+  /* --- Shadows --- */
+  --shadow-panel: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --shadow-focus: 0 0 0 2px #ffffff, 0 0 0 4px #6366f1;
+
+  /* --- Spacing --- */
   --space-0: 0;
   --space-1: 4px;
   --space-2: 8px;
@@ -45,35 +59,39 @@
   --space-6: 48px;
   --space-7: 64px;
 
-  --radius-control: 16px;
-  --radius-card: 16px;
-  --radius-panel: 24px;
-  --radius-chip: 999px;
+  /* --- Radius --- */
+  --radius-control: 10px;
+  --radius-card:    12px;
+  --radius-panel:   24px;
+  --radius-chip:    999px;
 
-  --font-family-heading: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-family-body: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  /* --- Typography --- */
+  --font-family-heading: 'Inter', system-ui, sans-serif;
+  --font-family-body:    'Inter', system-ui, sans-serif;
+  --font-family-mono:    'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 
-  --font-size-h1: clamp(2rem, 4vw, 3rem);
-  --font-size-h2: 1.5rem;
-  --font-size-body: 1rem;
-  --font-size-caption: 0.875rem;
+  --font-size-h1:      clamp(1.75rem, 3.5vw, 2.5rem);
+  --font-size-h2:      1.375rem;
+  --font-size-body:    0.9375rem;
+  --font-size-caption: 0.8125rem;
 
-  --line-height-heading: 1.25;
-  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+  --line-height-body:    1.6;
   --line-height-caption: 1.4;
 
-  --font-weight-body: 400;
-  --font-weight-medium: 500;
+  --font-weight-body:     400;
+  --font-weight-medium:   500;
   --font-weight-semibold: 600;
 
-  --duration-micro: 120ms;
-  --duration-panel: 240ms;
-  --easing-standard: ease;
+  /* --- Timing --- */
+  --duration-micro:   120ms;
+  --duration-panel:   240ms;
+  --easing-standard:  ease;
 
-  --z-base: 0;
-  --z-card: 10;
+  /* --- Z-index --- */
+  --z-base:     0;
+  --z-card:     10;
   --z-dropdown: 100;
-  --z-modal: 200;
-  --z-toast: 300;
+  --z-modal:    200;
+  --z-toast:    300;
 }

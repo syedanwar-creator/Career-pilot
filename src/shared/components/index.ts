@@ -1,4 +1,5 @@
 export * from "./AppNavLink";
+export * from "./AppSidebar";
 export * from "./Breadcrumbs";
 export * from "./Button";
 export * from "./Card";
