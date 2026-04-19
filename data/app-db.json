@@ -1899,9 +1899,381 @@
         ]
       },
       "answers": []
+    },
+    {
+      "id": "241bc2da-7f59-4043-abe6-023df0f4ae52",
+      "createdAt": "2026-04-19T18:08:16.955Z",
+      "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+      "careerId": "software-engineer",
+      "careerTitle": "Software Engineer",
+      "status": "completed",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 8-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Software Engineer.",
+        "questions": [
+          {
+            "id": "proof-software-engineer-1",
+            "dimension": "independence",
+            "question": "If this career requires long stretches of self-driven work, how ready are you for that?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-2",
+            "dimension": "independence",
+            "question": "If success depends on your personal follow-through, how much can others rely on you?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-3",
+            "dimension": "continuous-learning",
+            "question": "How willing are you to relearn your methods when the field changes?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-4",
+            "dimension": "continuous-learning",
+            "question": "If your current knowledge becomes outdated, how likely are you to rebuild your skill set?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-5",
+            "dimension": "discipline",
+            "question": "If this career expects daily discipline even when no one is watching, how ready are you for that reality?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-6",
+            "dimension": "ambiguity",
+            "question": "If this career gives you unclear problems instead of clear instructions, how would you respond?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-7",
+            "dimension": "ambiguity",
+            "question": "How comfortable are you making progress before every answer is fully known?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-8",
+            "dimension": "discipline",
+            "question": "If progress in this career is slow for months, how strong is your commitment to stay consistent?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": [
+        {
+          "questionId": "proof-software-engineer-1",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-software-engineer-2",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "proof-software-engineer-3",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "proof-software-engineer-4",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-software-engineer-5",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-software-engineer-6",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "proof-software-engineer-7",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "proof-software-engineer-8",
+          "optionIndex": 3
+        }
+      ],
+      "evaluation": {
+        "source": "fallback",
+        "overallScore": 88,
+        "points": 880,
+        "readinessBand": "Strong readiness",
+        "dimensionScores": {
+          "independence": 88,
+          "continuous-learning": 88,
+          "discipline": 100,
+          "ambiguity": 75
+        },
+        "strengths": [
+          "Discipline",
+          "Independence",
+          "Continuous Learning"
+        ],
+        "risks": [
+          "Independence",
+          "Continuous Learning",
+          "Ambiguity"
+        ],
+        "narrative": "The student shows strong readiness for Software Engineer. Stronger evidence appears in Discipline and Independence, while Independence needs more deliberate support.",
+        "parentSummary": "Software Engineer readiness is currently 88%. This score suggests strong readiness. Parents should focus on helping the student strengthen Independence without discouraging progress in Discipline.",
+        "schoolSummary": "The student earned 880 proof points for Software Engineer. School mentors can support improvement in Independence and Continuous Learning through guided experiences and reflective coaching.",
+        "nextSteps": [
+          "Give the student a small real-world challenge that develops Independence.",
+          "Continue exposure projects that use Discipline.",
+          "Review the proof score again after one month of focused practice."
+        ]
+      },
+      "completedAt": "2026-04-19T18:08:32.973Z"
+    },
+    {
+      "id": "666b9243-ddbe-40fe-ac95-cf4c0d1a387f",
+      "createdAt": "2026-04-19T18:16:26.370Z",
+      "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+      "careerId": "data-analyst",
+      "careerTitle": "Data Analyst",
+      "status": "completed",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 8-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Data Analyst.",
+        "questions": [
+          {
+            "id": "proof-data-analyst-1",
+            "dimension": "problem-solving",
+            "question": "If the first solution fails, how determined are you to keep working toward a better one?",
+            "whyItMatters": "Problem Solving is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-2",
+            "dimension": "problem-solving",
+            "question": "When people bring you complex issues, how ready are you to think carefully instead of escaping pressure?",
+            "whyItMatters": "Problem Solving is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-3",
+            "dimension": "ambiguity",
+            "question": "How comfortable are you making progress before every answer is fully known?",
+            "whyItMatters": "Ambiguity is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-4",
+            "dimension": "ambiguity",
+            "question": "When a career requires calm thinking in uncertainty, what is your natural response?",
+            "whyItMatters": "Ambiguity is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-5",
+            "dimension": "continuous-learning",
+            "question": "How willing are you to relearn your methods when the field changes?",
+            "whyItMatters": "Continuous Learning is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-6",
+            "dimension": "continuous-learning",
+            "question": "If your current knowledge becomes outdated, how likely are you to rebuild your skill set?",
+            "whyItMatters": "Continuous Learning is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-7",
+            "dimension": "independence",
+            "question": "How comfortable are you taking ownership without constant reassurance from parents or teachers?",
+            "whyItMatters": "Independence is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-data-analyst-8",
+            "dimension": "independence",
+            "question": "If this career requires long stretches of self-driven work, how ready are you for that?",
+            "whyItMatters": "Independence is important in Data Analyst.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": [
+        {
+          "questionId": "proof-data-analyst-1",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-data-analyst-2",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-data-analyst-3",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-data-analyst-4",
+          "optionIndex": 2
+        },
+        {
+          "questionId": "proof-data-analyst-5",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-data-analyst-6",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-data-analyst-7",
+          "optionIndex": 3
+        },
+        {
+          "questionId": "proof-data-analyst-8",
+          "optionIndex": 2
+        }
+      ],
+      "evaluation": {
+        "source": "fallback",
+        "overallScore": 94,
+        "points": 940,
+        "readinessBand": "Strong readiness",
+        "dimensionScores": {
+          "problem-solving": 100,
+          "ambiguity": 88,
+          "continuous-learning": 100,
+          "independence": 88
+        },
+        "strengths": [
+          "Problem Solving",
+          "Continuous Learning",
+          "Ambiguity"
+        ],
+        "risks": [
+          "Continuous Learning",
+          "Ambiguity",
+          "Independence"
+        ],
+        "narrative": "The student shows strong readiness for Data Analyst. Stronger evidence appears in Problem Solving and Continuous Learning, while Continuous Learning needs more deliberate support.",
+        "parentSummary": "Data Analyst readiness is currently 94%. This score suggests strong readiness. Parents should focus on helping the student strengthen Continuous Learning without discouraging progress in Problem Solving.",
+        "schoolSummary": "The student earned 940 proof points for Data Analyst. School mentors can support improvement in Continuous Learning and Ambiguity through guided experiences and reflective coaching.",
+        "nextSteps": [
+          "Give the student a small real-world challenge that develops Continuous Learning.",
+          "Continue exposure projects that use Problem Solving.",
+          "Review the proof score again after one month of focused practice."
+        ]
+      },
+      "completedAt": "2026-04-19T18:16:40.130Z"
     }
   ],
   "activityLog": [
+    {
+      "id": "651cee83-f319-4cda-997e-03f9fb8816ae",
+      "createdAt": "2026-04-19T18:16:40.130Z",
+      "type": "proof_completed",
+      "details": {
+        "userId": "b26212bf-a29c-42d5-97d9-aa08c777a7f8",
+        "careerId": "data-analyst",
+        "points": 940
+      },
+      "timestamp": "2026-04-19T18:16:40.130Z"
+    },
+    {
+      "id": "ff5a6c05-a391-402d-b4a1-7cf54ac704cb",
+      "createdAt": "2026-04-19T18:08:32.973Z",
+      "type": "proof_completed",
+      "details": {
+        "userId": "244240ad-8a90-44d5-a1d5-58eb9e176b31",
+        "careerId": "software-engineer",
+        "points": 880
+      },
+      "timestamp": "2026-04-19T18:08:32.973Z"
+    },
     {
       "id": "be286430-d44c-4f9c-96be-28c601881252",
       "createdAt": "2026-04-17T19:54:48.727Z",
