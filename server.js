@@ -242,7 +242,7 @@ async function handleLogin(request, response) {
   const db = readDb();
   const user = findUserByEmail(db, body.email);
 
-  assert(user, 404, "User not found.");
+  assert(user, 401, "User not found. Use a demo account or register first.");
   assert(verifyPassword(body.password, user.passwordHash), 401, "Incorrect password.");
 
   if (body.tenantSlug) {
