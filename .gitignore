@@ -4,6 +4,12 @@ node_modules/
 
 # Build output
 dist
+.next
+.turbo
+coverage
+.github
+.github/workflows/
+.github/workflows/ci.yml
 
 # TypeScript build artifacts
 *.tsbuildinfo
@@ -17,6 +23,7 @@ vite.config.d.ts
 
 # Local app/runtime data
 data/app-db.json
+.runtime/
 
 # Logs
 npm-debug.log*
