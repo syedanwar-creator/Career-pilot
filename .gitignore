@@ -7,6 +7,9 @@ dist
 .next
 .turbo
 coverage
+.github
+.github/workflows/
+.github/workflows/ci.yml
 
 # TypeScript build artifacts
 *.tsbuildinfo
