@@ -1899,6 +1899,228 @@
         ]
       },
       "answers": []
+    },
+    {
+      "id": "cc0a9476-f127-4e97-b789-a5221fc71722",
+      "createdAt": "2026-04-18T07:01:16.062Z",
+      "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+      "careerId": "software-engineer",
+      "careerTitle": "Software Engineer",
+      "status": "draft",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 8-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Software Engineer.",
+        "questions": [
+          {
+            "id": "proof-software-engineer-1",
+            "dimension": "continuous-learning",
+            "question": "If your current knowledge becomes outdated, how likely are you to rebuild your skill set?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-2",
+            "dimension": "ambiguity",
+            "question": "If this career gives you unclear problems instead of clear instructions, how would you respond?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-3",
+            "dimension": "independence",
+            "question": "If this career requires long stretches of self-driven work, how ready are you for that?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-4",
+            "dimension": "discipline",
+            "question": "When a routine becomes boring but still important, how likely are you to keep doing it well?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-5",
+            "dimension": "problem-solving",
+            "question": "When people bring you complex issues, how ready are you to think carefully instead of escaping pressure?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-6",
+            "dimension": "independence",
+            "question": "How comfortable are you taking ownership without constant reassurance from parents or teachers?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-7",
+            "dimension": "problem-solving",
+            "question": "How much energy do you get from solving hard problems that may take time?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-8",
+            "dimension": "continuous-learning",
+            "question": "How willing are you to relearn your methods when the field changes?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": []
+    },
+    {
+      "id": "87ede160-ac38-42a5-883f-06011419bdcc",
+      "createdAt": "2026-04-18T07:02:30.547Z",
+      "userId": "e1f0a920-9c3c-43d9-9434-a15d5ed7c143",
+      "careerId": "software-engineer",
+      "careerTitle": "Software Engineer",
+      "status": "draft",
+      "questionSet": {
+        "source": "fallback",
+        "introduction": "This 8-question proof session checks whether the student is mentally and behaviorally ready for the real demands of Software Engineer.",
+        "questions": [
+          {
+            "id": "proof-software-engineer-1",
+            "dimension": "ambiguity",
+            "question": "If this career gives you unclear problems instead of clear instructions, how would you respond?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-2",
+            "dimension": "ambiguity",
+            "question": "How comfortable are you making progress before every answer is fully known?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-3",
+            "dimension": "discipline",
+            "question": "When a routine becomes boring but still important, how likely are you to keep doing it well?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-4",
+            "dimension": "problem-solving",
+            "question": "If the first solution fails, how determined are you to keep working toward a better one?",
+            "whyItMatters": "Problem Solving is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-5",
+            "dimension": "ambiguity",
+            "question": "When a career requires calm thinking in uncertainty, what is your natural response?",
+            "whyItMatters": "Ambiguity is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-6",
+            "dimension": "continuous-learning",
+            "question": "How willing are you to relearn your methods when the field changes?",
+            "whyItMatters": "Continuous Learning is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-7",
+            "dimension": "discipline",
+            "question": "If progress in this career is slow for months, how strong is your commitment to stay consistent?",
+            "whyItMatters": "Discipline is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          },
+          {
+            "id": "proof-software-engineer-8",
+            "dimension": "independence",
+            "question": "If this career requires long stretches of self-driven work, how ready are you for that?",
+            "whyItMatters": "Independence is important in Software Engineer.",
+            "options": [
+              "I am not mentally ready for that right now.",
+              "I could try, but I would struggle without heavy support.",
+              "I believe I can handle it with preparation and discipline.",
+              "I am ready to accept that reality and grow through it."
+            ]
+          }
+        ]
+      },
+      "answers": []
     }
   ],
   "activityLog": [

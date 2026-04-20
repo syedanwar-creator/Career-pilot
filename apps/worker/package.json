@@ -1,0 +1,12 @@
+{
+  "name": "@career-pilot/worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node src/main.js",
+    "build": "node -e \"console.log('worker build placeholder')\"",
+    "lint": "node -e \"console.log('worker lint placeholder')\"",
+    "typecheck": "node -e \"console.log('worker typecheck placeholder')\"",
+    "test": "node -e \"console.log('worker tests placeholder')\""
+  }
+}
