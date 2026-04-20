@@ -2,7 +2,6 @@ services:
   - type: web
     name: career-pilot
     runtime: node
-    repo: https://github.com/AswinGMX/Career-pilot
     branch: main
     plan: free
     buildCommand: npm install && npm run build
