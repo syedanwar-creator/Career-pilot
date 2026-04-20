@@ -11,8 +11,19 @@ const { rankCareers } = require("./src/server/recommendations");
 const { ensureDemoData, getDemoAccounts } = require("./src/server/seed");
 
 const projectRoot = __dirname;
-const host = process.env.HOST || "127.0.0.1";
+const host = process.env.HOST || "0.0.0.0";
 const port = Number(process.env.PORT || 3000);
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
+
+function setCorsHeaders(request, response) {
+  const origin = request.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    response.setHeader("Access-Control-Allow-Origin", origin);
+    response.setHeader("Access-Control-Allow-Credentials", "true");
+    response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  }
+}
 
 ensureDatabase();
 ensureDemoData();
@@ -867,6 +878,14 @@ async function routeApi(request, response, pathname) {
 
 const server = http.createServer(async (request, response) => {
   try {
+    setCorsHeaders(request, response);
+
+    if (request.method === "OPTIONS") {
+      response.writeHead(204);
+      response.end();
+      return;
+    }
+
     const { pathname } = getRequestInfo(request);
 
     if (pathname.startsWith("/api/")) {
